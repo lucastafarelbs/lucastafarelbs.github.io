@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ednilson Amaral - Desenvolvedor Full Stack JavaScript</title>
-    <description>Site e blog pessoal onde tenho meu portfolio com trabalhos e projetos já desenvolvidos, além de alguns artigos com o intuito de compartilhar meus conhecimentos com a comunidade web.
+    <title>LucasTafarelBS :)</title>
+    <description>Website pessoal para retribuir à comunidade com um pouco dos conhecimentos adquiridos nela :)
 </description>
-    <link>http://ednilsonamaral.me/</link>
-    <atom:link href="http://ednilsonamaral.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 13 Jun 2017 00:22:14 -0300</pubDate>
-    <lastBuildDate>Tue, 13 Jun 2017 00:22:14 -0300</lastBuildDate>
+    <link>lucastafarelbs.github.io/</link>
+    <atom:link href="lucastafarelbs.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 13 Jun 2017 00:54:03 -0300</pubDate>
+    <lastBuildDate>Tue, 13 Jun 2017 00:54:03 -0300</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -26,8 +26,8 @@
 &lt;iframe src=&quot;https://www.youtube.com/embed/videoseries?list=PL77JVjKTJT2hpxOjdD6VDc1JDXAKs08z5&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 </description>
         <pubDate>Mon, 06 Feb 2017 23:06:00 -0200</pubDate>
-        <link>http://ednilsonamaral.me/curso-vue-js/</link>
-        <guid isPermaLink="true">http://ednilsonamaral.me/curso-vue-js/</guid>
+        <link>lucastafarelbs.github.io/curso-vue-js/</link>
+        <guid isPermaLink="true">lucastafarelbs.github.io/curso-vue-js/</guid>
         
         
       </item>
@@ -216,8 +216,8 @@
 &lt;p&gt;Abraços, até mais! =D&lt;/p&gt;
 </description>
         <pubDate>Wed, 01 Feb 2017 23:36:00 -0200</pubDate>
-        <link>http://ednilsonamaral.me/desenvolvendo-componentes-com-vue-js-2/</link>
-        <guid isPermaLink="true">http://ednilsonamaral.me/desenvolvendo-componentes-com-vue-js-2/</guid>
+        <link>lucastafarelbs.github.io/desenvolvendo-componentes-com-vue-js-2/</link>
+        <guid isPermaLink="true">lucastafarelbs.github.io/desenvolvendo-componentes-com-vue-js-2/</guid>
         
         
       </item>
@@ -351,8 +351,8 @@
 &lt;p&gt;&lt;img src=&quot;/assets/img/vlwflw.gif&quot; alt=&quot;Vaaleu, Faalo!&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 25 Aug 2016 20:36:00 -0300</pubDate>
-        <link>http://ednilsonamaral.me/review-livro-construindo-uma-aplicacao-ecommerce-com-mean/</link>
-        <guid isPermaLink="true">http://ednilsonamaral.me/review-livro-construindo-uma-aplicacao-ecommerce-com-mean/</guid>
+        <link>lucastafarelbs.github.io/review-livro-construindo-uma-aplicacao-ecommerce-com-mean/</link>
+        <guid isPermaLink="true">lucastafarelbs.github.io/review-livro-construindo-uma-aplicacao-ecommerce-com-mean/</guid>
         
         
       </item>
@@ -517,8 +517,8 @@
 &lt;p&gt;É isso aí pessoal, vaaleu, até mais! =D&lt;/p&gt;
 </description>
         <pubDate>Fri, 29 Jul 2016 07:21:00 -0300</pubDate>
-        <link>http://ednilsonamaral.me/padrao-de-indentacao-com-editorconfig/</link>
-        <guid isPermaLink="true">http://ednilsonamaral.me/padrao-de-indentacao-com-editorconfig/</guid>
+        <link>lucastafarelbs.github.io/padrao-de-indentacao-com-editorconfig/</link>
+        <guid isPermaLink="true">lucastafarelbs.github.io/padrao-de-indentacao-com-editorconfig/</guid>
         
         
       </item>
@@ -749,8 +749,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Fri, 08 Jul 2016 20:38:00 -0300</pubDate>
-        <link>http://ednilsonamaral.me/workflow-simples-porem-eficiente/</link>
-        <guid isPermaLink="true">http://ednilsonamaral.me/workflow-simples-porem-eficiente/</guid>
+        <link>lucastafarelbs.github.io/workflow-simples-porem-eficiente/</link>
+        <guid isPermaLink="true">lucastafarelbs.github.io/workflow-simples-porem-eficiente/</guid>
         
         
       </item>
@@ -872,8 +872,8 @@
 &lt;a href=&quot;https://github.com/es-shims/es5-shim&quot;&gt;ES5 - Shim&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 02 Feb 2016 07:35:00 -0200</pubDate>
-        <link>http://ednilsonamaral.me/decifrando-heranca-em-javascript/</link>
-        <guid isPermaLink="true">http://ednilsonamaral.me/decifrando-heranca-em-javascript/</guid>
+        <link>lucastafarelbs.github.io/decifrando-heranca-em-javascript/</link>
+        <guid isPermaLink="true">lucastafarelbs.github.io/decifrando-heranca-em-javascript/</guid>
         
         
       </item>
@@ -934,8 +934,8 @@
 &lt;a href=&quot;https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Fun%C3%A7%C3%B5es#Calling_functions&quot;&gt;Funções - Mozilla Developer Network&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 17 Dec 2015 14:00:00 -0200</pubDate>
-        <link>http://ednilsonamaral.me/garbage-collection/</link>
-        <guid isPermaLink="true">http://ednilsonamaral.me/garbage-collection/</guid>
+        <link>lucastafarelbs.github.io/garbage-collection/</link>
+        <guid isPermaLink="true">lucastafarelbs.github.io/garbage-collection/</guid>
         
         
       </item>
@@ -1238,8 +1238,8 @@ Fetched 3 record(s) in 7ms
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 09 Dec 2015 19:00:00 -0200</pubDate>
-        <link>http://ednilsonamaral.me/autenticacao-no-mongodb/</link>
-        <guid isPermaLink="true">http://ednilsonamaral.me/autenticacao-no-mongodb/</guid>
+        <link>lucastafarelbs.github.io/autenticacao-no-mongodb/</link>
+        <guid isPermaLink="true">lucastafarelbs.github.io/autenticacao-no-mongodb/</guid>
         
         
       </item>
@@ -1406,8 +1406,8 @@ Partition &amp;gt; Shard&lt;/p&gt;
 &lt;p&gt;Qualquer dúvida, sugestão, crítica, por favor, deixe seu comentário logo abaixo. Vaaleu! Até a próxima! :)&lt;/p&gt;
 </description>
         <pubDate>Tue, 08 Dec 2015 21:00:00 -0200</pubDate>
-        <link>http://ednilsonamaral.me/o-basico-de-mongodb/</link>
-        <guid isPermaLink="true">http://ednilsonamaral.me/o-basico-de-mongodb/</guid>
+        <link>lucastafarelbs.github.io/o-basico-de-mongodb/</link>
+        <guid isPermaLink="true">lucastafarelbs.github.io/o-basico-de-mongodb/</guid>
         
         
       </item>
@@ -1446,8 +1446,8 @@ Partition &amp;gt; Shard&lt;/p&gt;
 &lt;p&gt;Ah, na boa mano, nesse curso aí, não aprenderemos apenas a stack MEAN, hein. Terá muito mais coisas. Se eu fosse você, auto daria um presente de Natal, doando nem que seja 50 pila e estudar essa stack e muito mais! Lhe garanto, serão seus 50 reais bem mais investidos em tua vidinha humana! ;)&lt;/p&gt;
 </description>
         <pubDate>Mon, 07 Dec 2015 22:58:00 -0200</pubDate>
-        <link>http://ednilsonamaral.me/mean-o-que-e-isso/</link>
-        <guid isPermaLink="true">http://ednilsonamaral.me/mean-o-que-e-isso/</guid>
+        <link>lucastafarelbs.github.io/mean-o-que-e-isso/</link>
+        <guid isPermaLink="true">lucastafarelbs.github.io/mean-o-que-e-isso/</guid>
         
         
       </item>
