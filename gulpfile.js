@@ -1,80 +1,83 @@
-const gulp = require('gulp')
-const plumber = require('gulp-plumber')
-const browserSync = require('browser-sync')
-const stylus = require('gulp-stylus')
-const uglify = require('gulp-uglify')
-const concat = require('gulp-concat')
-const jeet = require('jeet')
-const rupture = require('rupture')
-const koutoSwiss = require('kouto-swiss')
-const prefixer = require('autoprefixer-stylus')
-const imagemin = require('gulp-imagemin')
-const cp = require('child_process')
+'use strict';
 
-const messages = {
-  jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
-}
+// chamando as dependências
+const gulp = require('gulp'),
+      prefixer = require('autoprefixer-stylus'),
+      browserSync = require('browser-sync'),
+      cleanCss = require('gulp-clean-css'),
+      concat = require('gulp-concat'),
+      imagemin = require('gulp-imagemin'),
+      plumber = require('gulp-plumber'),
+      stylus = require('gulp-stylus'),
+      uglify = require('gulp-uglify'),
+      watch = require('gulp-watch'),
+      jeet = require('jeet'),
+      nib = require('nib'),
+      rupture = require('rupture'),
+      env = require('minimist')(process.argv.slice(2)),
+      cp = require('child_process');
 
-gulp.task('jekyll-build', (done) => {
-  browserSync.notify(messages.jekyllBuild);
-  return cp.spawn('jekyll', ['build'], {
-      stdio: 'inherit'
-    })
-    .on('close', done);
+// Jekyll Build Task
+gulp.task('jekyll-build', function (done) {
+    browserSync.notify('Building Jekyll');
+
+    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
+        .on('close', done);
 });
 
-gulp.task('jekyll-rebuild', ['jekyll-build'], () => {
-  browserSync.reload()
-})
-
-
-gulp.task('browser-sync', ['jekyll-build'], () => {
-  browserSync({
-    server: {
-      baseDir: '_site'
-    }
-  });
+// Jekyll Rebuild and Reload Browser with Browser Sync
+gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+	browserSync.reload();
 });
 
-gulp.task('stylus', () => {
-  gulp.src('src/styl/main.styl')
-    .pipe(plumber())
-    .pipe(stylus({
-      use: [koutoSwiss(), prefixer(), jeet(), rupture()],
-      compress: true
-    }))
-    .pipe(gulp.dest('_site/assets/css/'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
-    .pipe(gulp.dest('assets/css'))
+// Browser Sync Task
+gulp.task('browser-sync', ['jekyll-build'], function() {
+    browserSync({
+        server: {
+            baseDir: '_site'
+        }
+    });
 });
 
-gulp.task('js', function () {
-  return gulp.src('src/js/**/*.js')
-    .pipe(plumber())
-    .pipe(concat('main.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('assets/js/'))
+// Stylus Task
+gulp.task('stylus', function(){
+    gulp.src('source/css/main.styl')
+        .pipe(plumber())
+        .pipe(stylus({
+            use:[prefixer(), jeet(), nib(), rupture()],
+            compress: true
+        }))
+        .pipe(gulp.dest('_site/assets/css/'))
+        .pipe(browserSync.reload({stream:true}))
+        .pipe(gulp.dest('assets/css/'));
 });
 
-gulp.task('imagemin', function () {
-  return gulp.src('src/img/**/*')
-    .pipe(plumber())
-    .pipe(imagemin({
-      optimizationLevel: 3,
-      progressive: true,
-      interlaced: true
-    }))
-    .pipe(gulp.dest('assets/img/'));
+// Imagemin Task
+gulp.task('imagemin', function() {
+    return gulp.src('source/img/**/*.{jpg,png,gif}')
+        .pipe(plumber())
+        .pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
+        .pipe(gulp.dest('assets/img'))
+        .pipe(browserSync.reload({stream: true}));
 });
 
+// JS Compile Task
+gulp.task('js', function(){
+    return gulp.src('source/js/**/*.js')
+        //.pipe(plumber())
+        //.pipe(concat('main.js'))
+        //.pipe(uglify())
+        .pipe(gulp.dest('assets/js'))
+        .pipe(browserSync.reload({stream: true}));
+});
 
+// Watch Task
 gulp.task('watch', function () {
-  gulp.watch('src/styl/**/*.styl', ['stylus']);
-  gulp.watch('src/js/**/*.js', ['js']);
-  gulp.watch('src/img/**/*.{jpg,png,gif}', ['imagemin']);
-  gulp.watch(['index.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+	gulp.watch('source/css/**/*.styl', ['stylus']);
+	gulp.watch('source/js/**/*.js', ['js']);
+    gulp.watch('source/img/**/*.{jpg,png,gif}', ['imagemin']);
+	gulp.watch(['**/*.html', '**.md', 'index.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-build']);
 });
 
-gulp.task('default', ['js', 'stylus', 'imagemin', 'browser-sync', 'watch']);
+// Default Task
+gulp.task('default', ['js', 'stylus', 'imagemin', 'watch', 'browser-sync']);

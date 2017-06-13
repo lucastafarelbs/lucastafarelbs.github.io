@@ -1,0 +1,40 @@
+.menu-home
+    center(100%)
+    margin-top 20px
+    margin-bottom 20px
+    opacity 0
+    @extends .menuHomeAnimation
+
+
+    ul
+        list-style none
+        width 100%
+
+    li
+        display inline-block
+        margin-right 15px
+
+        +below($tablet)
+            margin-right 0
+            margin-bottom 10px
+
+        &:last-child
+            margin-right 0
+
+    a
+        width 100px
+        color $main-white
+        border 1px solid $main-white
+        text-shadow 1px 1px $green-one
+        border-radius 6%
+        display block
+        padding 10px
+
+    li:hover
+        a
+            background-color $gray-one
+            color $green-one
+            text-shadow none
+            text-decoration none
+            font-weight bold
+            transition background-color .3s ease-in-out, color .4s linear, font-weight .5s linear
