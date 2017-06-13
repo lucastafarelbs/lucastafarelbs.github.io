@@ -1,61 +1,36 @@
 ---
-layout: home
+layout: default
 ---
 
-<div class="wrapper-home">
-    <header class="header-home">
-        <img class="image" src="assets/img/ednilson.jpg" alt="Foto do Autor do Blog, Ednilon Amaral">
+  <section class="bloco" id="sobre">
+    <img class="avatar" src="./img/lucas.jpg" alt="Lucas">
+    <p class="presentation">
+      Olá pessoa, me chamo Lucas Tafarel, desenvolvedor full stack apaixonado por tecnologia, pela natureza em todas as suas formas e outras coisas legais, seja muito bem vindo.
+    </p>
+  </section>
+  <section class="bloco" id="Novidades">
+    <p>
+      Novidades
+    </p>
+  </section>
+  <section class="bloco" id="timeline">
+    <p>
+      timeline
+    </p>
+  </section>
+  <section class="bloco" id="contato">
+    <p>
+      contato
+    </p>
+  </section>
 
-        <hgroup class="heading-group">
-            <h1 class="title">Ednilson Amaral</h1>
-            <h2 class="description">Desenvolvedor Full Stack JavaScript</h2>
-        </hgroup><!-- fim do /.heading-group -->
-    </header><!-- fim do /.header da home -->
-
-    <section class="intro">
-        <p class="text">
-            Olá, sou <strong>Ednilson Amaral</strong>, o cara da foto acima! Tenho 25 anos, e, atualmente moro em <strong>Itapeva/SP</strong> e trabalho como <strong>Desenvolvedor Full Stack Javascript</strong> e <strong>Desenvolvedor Front-end</strong>, remotamente. Sou pai do <em>baby boy</em> Rodrigo, apaixonado por tudo que é relacionado à tecnologias web, e, também, sou lutador de Jiu Jitsu, amante de NFL, comida japonesa, UFC, games, filmes, séries <em>(geek detected)</em>. Aqui você pode ver um pouco sobre mim, sobre minhas habilidades, meu blog, portfolio e projetos pessoais.
-        </p>
-    </section><!-- fim da /.intro do autor do blog -->
-
-    <nav class="menu-home clearfix">
-        <ul>
-            <li><a href="/sobre">Sobre mim</a></li>
-            <li><a href="/servicos">Serviços</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/blog">Blog</a></li>
-        </ul>
-    </nav><!-- fim do /.menu-home -->
-
-    <footer class="footer-home">
-        <div class="social-icons">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="https://github.com/ednilsonamaral/" target="_blank" title="Clique aqui para ir ao GitHub do Ednilson Amaral">
-                            <i class="fa fa-github" aria-hidden="true"></i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://br.linkedin.com/in/ednilson-amaral-02a984106" target="_blank" title="Clique aqui para ir ao Linkedin do Ednilson Amaral">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://twitter.com/ednilsonaamaral" target="_blank" title="Clique aqui para ir ao Twitter do Ednilson Amaral">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://www.facebook.com/ednilson.amaral" target="_blank" title="Clique aqui para ir ao Facebook do Ednilson Amaral">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div><!-- fim do /.social-icons do footer -->
-    </footer>
-</div>
+  <script>
+    function myFunction(modificar) {
+      var x = document.getElementById("myTopnav");
+      if (!modificar && (x.className === "menu")) {
+        x.className += " responsive";
+      } else {
+        x.className = "menu";
+      }
+    }
+  </script>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Ednilson Amaral - Desenvolvedor Full Stack JavaScript</title>
+
+    <meta name="description" content="Site e blog pessoal onde tenho meu portfolio com trabalhos e projetos já desenvolvidos, além de alguns artigos com o intuito de compartilhar meus conhecimentos com a comunidade web.
+">
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+
+    <link rel="canonical" href="http://ednilsonamaral.me/">
+    <link rel="alternate" type="application/rss+xml" title="Ednilson Amaral - Desenvolvedor Full Stack JavaScript" href="http://ednilsonamaral.me/feed.xml">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon" />
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/icon_57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/icon_72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/icon_114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicons/icon_144x144.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicons/icon_60x60.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicons/icon_120x120.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicons/icon_76x76.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicons/icon_152x152.png" />
+
+    <!-- Google Analitycs -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-80294477-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+</head>
+
+
+<body>
+     <header class="barra">
+  <span class="logo-container">
+      <a href="#"> <img class="logotipo" onclick="myFunction(1)" src="./img/logo-lucastafarelbs.svg" alt="LucasTafarelBS :)" > </a>
+      <a href="javascript:void(0);"  class="icon" onclick="myFunction()">&#9776;</a>
+    </span>
+  <div class="menu" id="myTopnav">
+    <a href="#sobre" onclick="myFunction(1)">Sobre</a>
+    <a href="#Novidades" onclick="myFunction(1)">Novidades</a>
+    <a href="#timeline" onclick="myFunction(1)">Experiência</a>
+    <a href="#contato" onclick="myFunction(1)">Contato</a>
+    <a href="blog" onclick="myFunction(1)">Blog</a>
+  </div>
+</header>
+
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="content">
+                  <section class="bloco" id="sobre">
+    <img class="avatar" src="./img/lucas.jpg" alt="Lucas">
+    <p class="presentation">
+      Olá pessoa, me chamo Lucas Tafarel, desenvolvedor full stack apaixonado por tecnologia, pela natureza em todas as suas formas e outras coisas legais, seja muito bem vindo.
+    </p>
+  </section>
+  <section class="bloco" id="Novidades">
+    <p>
+      Novidades
+    </p>
+  </section>
+  <section class="bloco" id="timeline">
+    <p>
+      timeline
+    </p>
+  </section>
+  <section class="bloco" id="contato">
+    <p>
+      contato
+    </p>
+  </section>
+
+  <script>
+    function myFunction(modificar) {
+      var x = document.getElementById("myTopnav");
+      if (!modificar && (x.className === "menu")) {
+        x.className += " responsive";
+      } else {
+        x.className = "menu";
+      }
+    }
+  </script>
+
+            </div>
+
+            <footer class="footer">
+  <div class="text">
+    <p class="title">
+      Feito com &hearts; e [Coffee] . Hospedado por
+      <a href="https://pages.github.com/" target="_blank" title="Clique aqui para ir para o site do GitHub Pages">
+          GitHub Pages
+        </a>
+      <a href="https://jekyllrb.com/" target="_blank" title="Clique aqui para ir pra página oficial do Jekyll">Jekyll</a>.
+    </p>
+  </div>
+</footer>
+
+        </div><!-- fim do /.container -->
+    </div><!-- fim do /.wrapper -->
+</body>
+</html>

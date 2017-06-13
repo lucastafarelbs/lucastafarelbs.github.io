@@ -1,0 +1,91 @@
+.barra{
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(90, 80, 75, 0.6);
+  min-height: 50px;
+}
+
+.icon{
+  display: none;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.logotipo{
+ max-width: 250px;
+ fill: red;
+ padding-left: 10px;
+}
+
+.menu {
+  overflow: hidden;
+}
+
+.menu a {
+  float: left;
+  display: block;
+  color: #e2d3c3;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.menu a:hover {
+  background-color: #ddd;
+  color: gray;
+}
+
+.menu .icon {
+  display: none;
+}
+
+.logo-container{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items: center;
+}
+
+
+@media screen and (max-width: 800px) {
+
+  .icon{
+    display: block;
+  }
+
+  .barra{
+    flex-direction: column;
+  }
+
+  .menu a {display: none;}
+  .menu a.icon {
+    float: right;
+    display: block;
+  }
+
+
+
+  .menu.responsive {
+    position: relative;
+  }
+
+  .menu.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .menu.responsive a {
+    float: none;
+    margin: 0px!important;
+    display: block;
+    text-align: center;
+  }
+
+}
