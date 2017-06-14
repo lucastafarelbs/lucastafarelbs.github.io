@@ -73,7 +73,7 @@ gulp.task('js', function(){
 
 // Watch Task
 gulp.task('watch', function () {
-	gulp.watch('source/css/**/*.styl', ['stylus']);
+	gulp.watch('source/styl/**/*.styl', ['stylus']);
 	gulp.watch('source/js/**/*.js', ['js']);
     gulp.watch('source/img/**/*.{jpg,png,gif}', ['imagemin']);
 	gulp.watch(['**/*.html', '**.md', 'index.html', '_includes/*.html', '_layouts/*.html', '_posts/*'], ['jekyll-build']);
