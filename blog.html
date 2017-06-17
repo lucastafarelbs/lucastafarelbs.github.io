@@ -69,16 +69,12 @@ layout: default
                     <img src="{{ post.image }}" alt="">
                 </a>
             </div>
-
             <div class="text clearfix">
                 <h2 class="title-project">
                     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                 </h2>
-
                 <span class="post-meta">Publicado em: {{ post.date | date: "%d/%m/%Y" }}</span>
-
                 <p>{{ post.introduction }}</p>
-
                 <span class="link-leia-mais pull-right">
                     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">leia mais</a>
                 </span>
