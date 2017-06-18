@@ -1,45 +1,54 @@
 .barra{
+  z-index 1000
   position: fixed;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: rgba(90, 80, 75, 0.6);
-  min-height: 50px;
+  background-color: rgba($primary, 0.85);
+  a{
+    color $secondary;
+  }
+  min-height: $topbarHeight
+}
+
+.logo-container{
+  display flex
+  justify-content center
+  align-items center
+  padding-left 10px
+  .logotipo {
+    max-width 250px
+  }
 }
 
 .icon{
   display: none;
-  color: white;
   text-decoration: none;
   padding: 10px;
   font-size: 20px;
   font-weight: bolder;
 }
 
-.logotipo{
- max-width: 250px;
- fill: red;
- padding-left: 10px;
-}
-
 .menu {
   overflow: hidden;
+  display: flex;
 }
 
 .menu a {
-  float: left;
-  display: block;
-  color: #e2d3c3;
+  cursor: pointer
+  flex-direction:row;
   text-align: center;
-  padding: 10px 10px;
+  padding: 0px 10px;
   text-decoration: none;
-  font-size: 25px;
+  font-family: 'Palanquin';
+	font-weight: bold;
+  line-height: $topbarHeight
 }
 
 .menu a:hover {
-  background-color: #ddd;
-  color: gray;
+  background-color: $secondary;
+  color: $primary;
 }
 
 .menu .icon {
@@ -53,8 +62,7 @@
   align-items: center;
 }
 
-
-@media screen and (max-width: 800px) {
++below($tablet) {
 
   .icon{
     display: block;
@@ -64,10 +72,14 @@
     flex-direction: column;
   }
 
+  .menu{
+    display: flex;
+    flex-direction:column
+  }
+
   .menu a {display: none;}
   .menu a.icon {
     float: right;
-    display: block;
   }
 
 

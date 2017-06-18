@@ -1,0 +1,58 @@
+#sobre{
+  background-image: url(../img/background-img.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+
+#Novidades{ background-color: #456;}
+#timeline{background-color: #567}
+#blog{background-color: #678}
+#contato{background-color: #789}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  padding-top $topbarHeight
+}
+
+.section-content {
+  margin 0px 10px
+  background rgba(violet, 0.5)
+  display flex
+  flex-direction column
+  justify-content center
+  position absolute
+  align-items center;
+}
+
+.avatar {
+  margin-top 20px
+  line-height 20px
+  max-width: 200px;
+  border-radius: 100%;
+  box-shadow: 3px 3px 15px 2px rgba(0,0,0,0.5);
+}
+
+.presentation{
+  color: $secondary;
+  font-size: 20px;
+  font-family Palanquin
+  font-weight light
+
+}
+
++above($mobile){
+  .presentation{
+      max-width 70%
+  }
+}
+
+
++above($tablet){
+  .presentation{
+      max-width 60%
+  }
+}
