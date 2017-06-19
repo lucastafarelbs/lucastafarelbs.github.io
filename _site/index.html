@@ -46,15 +46,15 @@
      <header class="barra">
   <span class="logo-container">
       <a href="#">
-        <img class="logotipo" onclick="myFunction(1)" src="./assets/img/logo.svg" alt="LucasTafarelBS :)" > 
+        <img class="logotipo" onclick="myFunction(1)" src="./assets/img/logo.svg" alt="LucasTafarelBS :)" >
       </a>
       <a href="javascript:void(0);"  class="icon" onclick="myFunction()">&#9776;</a>
     </span>
   <div class="menu" id="myTopnav">
-    <a href="#sobre" onclick="myFunction(1)">Sobre</a>
-    <a href="#Novidades" onclick="myFunction(1)">Novidades</a>
-    <a href="#timeline" onclick="myFunction(1)">Experiência</a>
-    <a href="#contato" onclick="myFunction(1)">Contato</a>
+    <a href="#about" onclick="myFunction(1)">Sobre</a>
+    <a href="#news" onclick="myFunction(1)">Novidades</a>
+    <a href="#experience" onclick="myFunction(1)">Experiência</a>
+    <a href="#contact" onclick="myFunction(1)">Contato</a>
     <a href="blog" onclick="myFunction(1)">Blog</a>
   </div>
 </header>
@@ -63,31 +63,63 @@
     <div class="wrapper">
         <div class="container">
             <div class="content">
-                  <section class="secao" id="sobre">
+                  <script type="text/javascript">
+    const testando = (msg) =>
+      window.location = msg
+  </script>
+
+  <section id="about">
     <span class="section-content">
       <img class="avatar" src="./assets/img/avatar.jpg" alt="Lucas">
-      <p class="presentation">
+      <h3 class="presentation">
         Olá pessoa, me chamo Lucas Tafarel, desenvolvedor full stack apaixonado
         por tecnologia, pela natureza em todas as suas formas e outras coisas legais,
-        seja muito bem vinda, aqui você encontrará meus últimos trabalhos, as postagens
+        aqui você encontrará meus últimos trabalhos, as postagens
         mais recentes no blog e meus contatos.
-      </p>
+      </h3>
     </span>
   </section>
-  <section class="secao" id="Novidades">
-    <p>
-      Novidades
-    </p>
+  <section id="news">
+    <span class="section-content">
+      <span class="container-news">
+
+        <!--  -->
+        <div class="news-post" onclick="testando('/blog/#teste')">
+          <img class="image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"/>
+          <h1 class="title"> <strong>NodeJS for Dummies :) </strong></h1>
+          <p class="description"> Muito conteúdo confuso ? vem comigo !</p>
+          <p class="data"> Por [autor] em [data] | [compartilhamentos] </p>
+        </div>
+
+        <!--  -->
+        <div class="news-post">
+          <img class="image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"/>
+          <h1 class="title"> <strong>NodeJS for Dummies :) </strong></h1>
+          <p class="description"> Muito conteúdo confuso ? vem comigo !</p>
+          <p class="data"> Por [autor] em [data] | [compartilhamentos] </p>
+        </div>
+
+        <!--  -->
+        <div class="news-post">
+          <img class="image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"/>
+          <h1 class="title"> <strong>NodeJS for Dummies :) </strong></h1>
+          <p class="description"> Muito conteúdo confuso ? vem comigo !</p>
+          <p class="data"> Por [autor] em [data] | [compartilhamentos] </p>
+        </div>
+      </span>
+    </span>
   </section>
-  <section class="secao" id="timeline">
-    <p>
-      timeline
-    </p>
+
+  <section id="experience">
+    <span class="section-content">
+      "Experiência"
+    </span>
   </section>
-  <section class="secao" id="contato">
-    <p>
-      contato
-    </p>
+
+  <section id="contact">
+    <span class="section-content">
+      "contato"
+    </span>
   </section>
 
   <script>

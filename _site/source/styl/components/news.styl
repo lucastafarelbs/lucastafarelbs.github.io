@@ -1,0 +1,39 @@
+#news
+  background-color $secondary
+  color $primary
+
+.container-news
+  width 90%
+
+.news-post
+  flexIt(column)
+  background-color rgba($white, 0.6)
+  border 2px solid rgba($primary, 0.4)
+  border-radius 5px
+  padding 2%
+  font-family Palanquin
+  margin-bottom 2rem
+  .title
+    line-height 3rem
+  .description, .data, .title, .image
+    margin-bottom 0.8rem
+    overflow hidden
+  .description, .data
+    text-align justify
+  .description
+    border-bottom 2px solid rgba($primary, 0.2)
+  .image
+    width 100%
+    border-radius 5px
+    max-height 11.5em
+
+
+
++above($tablet)
+  .container-news
+    flexIt(row)
+    width 80%
+
+  .news-post
+    max-width 30%
+    margin 0 2%
