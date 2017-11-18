@@ -42,13 +42,13 @@
 
 
 <body>
-     <header class="barra">
-  <span class="logo-container">
-      <a href="#">
-        <img class="logotipo" onclick="myFunction(1)" src="./assets/img/logo.svg" alt="LucasTafarelBS :)" >
+     <header class="barra" id="barra">
+  <span class="logo-container" >
+      <a href="#" class="logotipo" >
+        <img onclick="myFunction(1)" src="./assets/img/logo.svg" alt="LucasTafarelBS :)" >
       </a>
-      <a href="javascript:void(0);"  class="icon" onclick="myFunction()">&#9776;</a>
-    </span>
+      <a href="javascript:void(0);"  class="icon" onclick="myFunction(0)">&#9776;</a>
+  </span>
   <div class="menu" id="myTopnav">
     <a href="#about" onclick="myFunction(1)">Sobre</a>
     <a href="#news" onclick="myFunction(1)">Novidades</a>
@@ -57,6 +57,27 @@
     <a href="blog" onclick="myFunction(1)">Blog</a>
   </div>
 </header>
+
+
+<script>
+  const modification = ( element, classToCompare, classToAdd) => {
+    if (element.className === classToCompare) {
+      element.className = `${element.className} ${classToAdd}`;
+    }
+    else {
+      element.className = `${classToCompare}`;
+    }
+  }
+
+  function myFunction(modificar) {
+    let myTopNav = document.getElementById('myTopnav')
+    let barra = document.getElementById('barra')
+    if ( !modificar ) {
+      modification(myTopNav, 'menu', 'responsive')
+      modification(barra, 'barra', 'responsive')
+    }
+  }
+</script>
 
 
     <div class="wrapper">
@@ -89,7 +110,7 @@
 
 <p>As alocações de variáveis no JavaScript não feitas conforme elas são declaras, conforme o exemplo abaixo:</p>
 
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span> <span class="c1">// aloca memória para um número  </span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">n</span> <span class="o">=</span> <span class="mi">123</span><span class="p">;</span> <span class="c1">// aloca memória para um número  </span>
 <span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="s2">"azerty"</span><span class="p">;</span> <span class="c1">// aloca memória para uma string  </span>
 
 <span class="kd">var</span> <span class="nx">o</span> <span class="o">=</span> <span class="p">{</span>  
@@ -100,8 +121,7 @@
 <span class="c1">// (assim como o objeto) aloca memória para o vetor e   </span>
 <span class="c1">// seus valores contidos  </span>
 <span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="s2">"abra"</span><span class="p">];</span>  
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Como podemos observar no exemplo acima, ele aloca na memória conforme vamos declarando nossas variáveis.</p>
 
@@ -109,13 +129,12 @@
 
 <p>Definir uma função não basta para executá-la. Definir é simplesmente dar um nome a função e especificar o que será feito quando tal função for chamada.</p>
 
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">media</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>  
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">media</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>  
 
 <span class="c1">//ou  </span>
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">media</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">));</span>  
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Podemos chamar a função das duas maneiras acima. Ou também, chamar uma função dentro de outra função. As funções são objetos, e, esses objetos têm métodos.</p>
 

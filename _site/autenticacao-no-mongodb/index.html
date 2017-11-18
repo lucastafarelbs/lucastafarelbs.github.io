@@ -42,13 +42,13 @@
 
 
 <body>
-     <header class="barra">
-  <span class="logo-container">
-      <a href="#">
-        <img class="logotipo" onclick="myFunction(1)" src="./assets/img/logo.svg" alt="LucasTafarelBS :)" >
+     <header class="barra" id="barra">
+  <span class="logo-container" >
+      <a href="#" class="logotipo" >
+        <img onclick="myFunction(1)" src="./assets/img/logo.svg" alt="LucasTafarelBS :)" >
       </a>
-      <a href="javascript:void(0);"  class="icon" onclick="myFunction()">&#9776;</a>
-    </span>
+      <a href="javascript:void(0);"  class="icon" onclick="myFunction(0)">&#9776;</a>
+  </span>
   <div class="menu" id="myTopnav">
     <a href="#about" onclick="myFunction(1)">Sobre</a>
     <a href="#news" onclick="myFunction(1)">Novidades</a>
@@ -57,6 +57,27 @@
     <a href="blog" onclick="myFunction(1)">Blog</a>
   </div>
 </header>
+
+
+<script>
+  const modification = ( element, classToCompare, classToAdd) => {
+    if (element.className === classToCompare) {
+      element.className = `${element.className} ${classToAdd}`;
+    }
+    else {
+      element.className = `${classToCompare}`;
+    }
+  }
+
+  function myFunction(modificar) {
+    let myTopNav = document.getElementById('myTopnav')
+    let barra = document.getElementById('barra')
+    if ( !modificar ) {
+      modification(myTopNav, 'menu', 'responsive')
+      modification(barra, 'barra', 'responsive')
+    }
+  }
+</script>
 
 
     <div class="wrapper">
@@ -83,15 +104,14 @@
 
 <p>Para criarmos usuários no MongoDB, devemos utilizar a função <code class="highlighter-rouge">db.createUser()</code>. A sintaxe básica para a criação de um novo usuário no MongoDB é a seguinte:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="err">user:</span><span class="w"> </span><span class="nt">"&lt;name&gt;"</span><span class="err">,</span><span class="w">  
-  </span><span class="err">pwd</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;cleartext password&gt;"</span><span class="p">,</span><span class="w">  
-  </span><span class="err">customData</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">&lt;any</span><span class="w"> </span><span class="err">information&gt;</span><span class="w"> </span><span class="p">},</span><span class="w">  
-  </span><span class="err">roles</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">  
-    </span><span class="p">{</span><span class="w"> </span><span class="err">role:</span><span class="w"> </span><span class="nt">"&lt;role&gt;"</span><span class="err">,</span><span class="w"> </span><span class="err">db</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;database&gt;"</span><span class="w"> </span><span class="p">},</span><span class="w">  
-  </span><span class="p">]</span><span class="w">  
-</span><span class="p">}</span><span class="w">  
-</span></code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{ user: "&lt;name&gt;",  
+  pwd: "&lt;cleartext password&gt;",  
+  customData: { &lt;any information&gt; },  
+  roles: [  
+    { role: "&lt;role&gt;", db: "&lt;database&gt;" },  
+  ]  
+}  
+</code></pre></div></div>
 
 <p>Onde iremos informar o nome, senha, algumas informações adicionas no <code class="highlighter-rouge">customData</code>, se quisermos ou não. Os campos de nome, senha e roles são obrigatórios, já o campo customData é opcional. Em <code class="highlighter-rouge">roles</code> iremos informar quais os privilégios para esse usuário e em qual <code class="highlighter-rouge">database</code> ele irá ter tais privilégios.</p>
 
@@ -99,7 +119,7 @@
 
 <p>Se passarmos durante o comando <code class="highlighter-rouge">db.createUser()</code> sem nenhum <code class="highlighter-rouge">role</code>, informando apenas o nome do database que o usuário vai ter autorização de acesso, então, o MongoDB vai retornar um erro, como visto no trecho a seguir:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>admin&gt; db.createUser(  
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>admin&gt; db.createUser(  
 		{  
 			user: "comum",  
 			pwd: "comum123",  
@@ -111,12 +131,11 @@
 _getErrorWithCode@src/mongo/shell/utils.js:23:13  
 DB.prototype.createUser@src/mongo/shell/db.js:1225:11  
 @(shell):1:1  
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>O erro acima diz que é necessário passar algum valor no campo <code class="highlighter-rouge">role</code>. Então, devemos criar um usuário comum, do tipo apenas leitura da seguinte forma:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>admin&gt; db.createUser(  
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>admin&gt; db.createUser(  
 		{  
 			user: "comum",  
 			pwd: "comum123",  
@@ -133,14 +152,13 @@ Successfully added user: {
     }  
   ]  
 }  
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="criando-usuário-administrador">Criando Usuário Administrador</h3>
 
 <p>Para criarmos um usuário administrador o processo é o mesmo. Só muda o array role. No exemplo a seguir utilizo o <code class="highlighter-rouge">userAdminAnyDatabase</code> que tem os mesmos privilégios do role <code class="highlighter-rouge">userAdmin</code>. A diferença entre eles é que o <code class="highlighter-rouge">userAdminAnyDatabase</code> é aplicável a todos os bancos em um cluster.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>admin&gt; db.createUser(  
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>admin&gt; db.createUser(  
 		{  
 			user: "userFoda",  
 			pwd: "foda321",  
@@ -157,12 +175,11 @@ Successfully added user: {
     }  
   ]  
 }  
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Então, assim, listamos os usuários criados:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>admin&gt; db.system.users.find()  
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>admin&gt; db.system.users.find()  
 {  
   "_id": "admin.TesteAdmin",  
   "user": "TesteAdmin",  
@@ -221,8 +238,7 @@ Successfully added user: {
   ]  
 }  
 Fetched 3 record(s) in 7ms  
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h2 id="cluster-administration-roles">Cluster Administration Roles</h2>
 

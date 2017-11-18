@@ -3,32 +3,14 @@
   color $primary
 
 .experience-content
-  padding 5%
+  width 100%
 
-// .experience-title
-//   margin-top 3%
-//   text-align center
-//
-// .experience-cont
-//   width 100%
-//   flexIt()
-//
-// .academics, .professional
-//   width 100%
-//   flexIt()
-//   .title
-//     border-bottom 2px solid rgba($primary, 0.4)
-//     width 100%
-//     text-align center
+
+.experience-title
+   text-align center
 
 .experience-post
   flexIt()
-  flex-flow: row wrap;
-  width 100%
-  background-color green
-
-.professional
-  margin-top 2%
 
 .brick
   background-color black
@@ -38,14 +20,8 @@
 
 +above($tablet)
   .experience-cont
-    flexIt(column)
-
-  .academics
-    margin-right 2%
-
-  .professional
-    margin-left 2%
-    margin-top 0
+    padding 5%
+    flexIt(column, flex-start,flex-start)
 
   .brick
     background-color black

@@ -42,13 +42,13 @@
 
 
 <body>
-     <header class="barra">
-  <span class="logo-container">
-      <a href="#">
-        <img class="logotipo" onclick="myFunction(1)" src="./assets/img/logo.svg" alt="LucasTafarelBS :)" >
+     <header class="barra" id="barra">
+  <span class="logo-container" >
+      <a href="#" class="logotipo" >
+        <img onclick="myFunction(1)" src="./assets/img/logo.svg" alt="LucasTafarelBS :)" >
       </a>
-      <a href="javascript:void(0);"  class="icon" onclick="myFunction()">&#9776;</a>
-    </span>
+      <a href="javascript:void(0);"  class="icon" onclick="myFunction(0)">&#9776;</a>
+  </span>
   <div class="menu" id="myTopnav">
     <a href="#about" onclick="myFunction(1)">Sobre</a>
     <a href="#news" onclick="myFunction(1)">Novidades</a>
@@ -57,6 +57,27 @@
     <a href="blog" onclick="myFunction(1)">Blog</a>
   </div>
 </header>
+
+
+<script>
+  const modification = ( element, classToCompare, classToAdd) => {
+    if (element.className === classToCompare) {
+      element.className = `${element.className} ${classToAdd}`;
+    }
+    else {
+      element.className = `${classToCompare}`;
+    }
+  }
+
+  function myFunction(modificar) {
+    let myTopNav = document.getElementById('myTopnav')
+    let barra = document.getElementById('barra')
+    if ( !modificar ) {
+      modification(myTopNav, 'menu', 'responsive')
+      modification(barra, 'barra', 'responsive')
+    }
+  }
+</script>
 
 
     <div class="wrapper">
@@ -126,7 +147,7 @@
 
 <p>Abaixo, um exemplo de configuração básica dele:</p>
 
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="err">#</span> <span class="nx">EditorConfig</span> <span class="nx">is</span> <span class="nx">awesome</span><span class="err">:</span> <span class="nx">http</span><span class="err">:</span><span class="c1">//EditorConfig.org</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">#</span> <span class="nx">EditorConfig</span> <span class="nx">is</span> <span class="nx">awesome</span><span class="p">:</span> <span class="nx">http</span><span class="p">:</span><span class="c1">//EditorConfig.org</span>
 
 <span class="err">#</span> <span class="nx">top</span><span class="o">-</span><span class="nx">most</span> <span class="nx">EditorConfig</span> <span class="nx">file</span>
 <span class="nx">root</span> <span class="o">=</span> <span class="kc">true</span>
@@ -137,7 +158,7 @@
 <span class="nx">insert_final_newline</span> <span class="o">=</span> <span class="kc">true</span>
 
 <span class="err">#</span> <span class="nx">Matches</span> <span class="nx">multiple</span> <span class="nx">files</span> <span class="kd">with</span> <span class="nx">brace</span> <span class="nx">expansion</span> <span class="nx">notation</span>
-<span class="err">#</span> <span class="nx">Set</span> <span class="k">default</span> <span class="nx">charset</span>
+<span class="err">#</span> <span class="nb">Set</span> <span class="k">default</span> <span class="nx">charset</span>
 <span class="p">[</span><span class="o">*</span><span class="p">.{</span><span class="nx">js</span><span class="p">,</span><span class="nx">py</span><span class="p">}]</span>
 <span class="nx">charset</span> <span class="o">=</span> <span class="nx">utf</span><span class="o">-</span><span class="mi">8</span>
 
@@ -159,8 +180,7 @@
 <span class="p">[{</span><span class="kr">package</span><span class="p">.</span><span class="nx">json</span><span class="p">,.</span><span class="nx">travis</span><span class="p">.</span><span class="nx">yml</span><span class="p">}]</span>
 <span class="nx">indent_style</span> <span class="o">=</span> <span class="nx">space</span>
 <span class="nx">indent_size</span> <span class="o">=</span> <span class="mi">2</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Visualizando o código acima, temos:</p>
 
@@ -174,7 +194,7 @@
 
 <p>Agora, vamos a um exemplo com outros tipos de arquivo:</p>
 
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="err">#</span> <span class="nx">EditorConfig</span> <span class="nx">is</span> <span class="nx">awesome</span><span class="err">:</span> <span class="nx">http</span><span class="err">:</span><span class="c1">//EditorConfig.org</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">#</span> <span class="nx">EditorConfig</span> <span class="nx">is</span> <span class="nx">awesome</span><span class="p">:</span> <span class="nx">http</span><span class="p">:</span><span class="c1">//EditorConfig.org</span>
 
 <span class="err">#</span> <span class="nx">top</span><span class="o">-</span><span class="nx">most</span> <span class="nx">EditorConfig</span> <span class="nx">file</span>
 <span class="nx">root</span> <span class="o">=</span> <span class="kc">true</span>
@@ -202,8 +222,7 @@
 <span class="p">[</span><span class="o">*</span><span class="p">.</span><span class="nx">json</span><span class="p">]</span>
 <span class="nx">indent_style</span> <span class="o">=</span> <span class="nx">tab</span>
 <span class="nx">indent_size</span> <span class="o">=</span> <span class="mi">2</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Ficou mais claro nesse exemplo? Acho que sim, né! Bom, vamos a explicação desse exemplo:</p>
 

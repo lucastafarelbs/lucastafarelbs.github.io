@@ -1,20 +1,15 @@
 ---
 layout: default
 ---
-  <script type="text/javascript">
-    const testando = (msg) =>
-      window.location = msg
-  </script>
-
   <section id="about">
-    <span class="section-content">
+    <span class="section-content section-content-specific">
       <img class="avatar" src="./assets/img/avatar.jpg" alt="Lucas">
-      <h3 class="presentation">
+      <h4 class="presentation">
         Olá pessoa, me chamo Lucas Tafarel, desenvolvedor full stack apaixonado
         por tecnologia, pela natureza em todas as suas formas e outras coisas legais,
         aqui você encontrará meus últimos trabalhos, as postagens
         mais recentes no blog e meus contatos.
-      </h3>
+      </h4>
     </span>
   </section>
   <section id="news">
@@ -91,14 +86,3 @@ layout: default
       "contato"
     </span>
   </section>
-
-  <script>
-    function myFunction(modificar) {
-      var x = document.getElementById("myTopnav");
-      if (!modificar && (x.className === "menu")) {
-        x.className += " responsive";
-      } else {
-        x.className = "menu";
-      }
-    }
-  </script>
