@@ -3,21 +3,25 @@
   position: fixed;
   width: 100%;
   flexIt(row)
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  align-items: top;
   a{
     color $secondary;
+    font-size $h4FontSize
+    text-shadow 1px 1px 1px rgba(black, 0.3)
   }
   min-height: $topbarHeight
-  margin-top: 3%
+  margin-top: 4%
 }
 
 .logo-container{
+  margin-left 6rem;
   flexIt(row)
   .logotipo {
     font-size 0px
     img{
-      max-width 300px
+      max-width 290px
+      margin-right 3rem;
     }
   }
 }
@@ -32,6 +36,7 @@
 .menu {
   overflow: hidden;
   display: flex;
+  margin-right 6rem;
 }
 
 .menu a {
@@ -44,9 +49,15 @@
   line-height: $topbarHeight
 }
 
+hoverOnLink() {
+  a:hover {
+    background-color: rgba($white,0.5);
+    color: $white;
+  }
+}
+
 .menu a:hover {
-  background-color: rgba($white,0.2);
-  color: $white;
+  hoveron()
 }
 
 .menu .icon {
@@ -63,11 +74,11 @@
   .barra{
     margin-top 0px;
     flexIt(column, space-between, center)
+    background-color: rgba($black,0.6);
   }
   .barra.responsive {
-    background-color: rgba($black,0.5);
     .logo-container {
-      background-color: rgba($black,0.3);
+      background-color rgba($black, 0.6)
     }
   }
 
@@ -75,34 +86,43 @@
     width 100%
     float: none;
     margin-top: 0px;
+    margin-left 0px
     padding 10px;
     flexIt(row, space-between, center)
-    // min-height $topbarHeight
 
     .logotipo {
       flexIt(row, center, center)
       margin-left 10px
+      img{
+        max-width 250px
+      }
     }
   }
 
   .menu{
     flexIt(column)
     width 100%
-    background-color: rgba($black,0.1);
   }
 
-  .menu a {display: none;}
+  .menu a {
+    display: none;
+  }
 
   .menu.responsive {
     position: relative;
+    margin 0px
   }
 
   .menu.responsive a {
     float: none;
-    margin: 0px;
     display: block;
     text-align: center;
-    width 100%
+    width 100%;
   }
-
+  .menu.responsive a:nth-child(odd) {
+    background-color: rgba($black,0.1);
+  }
+  .menu.responsive {
+    hoverOnLink()
+  }
 }

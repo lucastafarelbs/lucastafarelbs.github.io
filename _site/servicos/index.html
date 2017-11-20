@@ -12,7 +12,6 @@
 ">
 
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
 
     <link rel="canonical" href="lucastafarelbs.github.io/servicos/">
     <link rel="alternate" type="application/rss+xml" title="LucasTafarelBS :)" href="lucastafarelbs.github.io/feed.xml">
@@ -46,16 +45,16 @@
      <header class="barra" id="barra">
   <span class="logo-container" >
       <a href="#" class="logotipo" >
-        <img onclick="myFunction(1)" src="./assets/img/logo.svg" alt="LucasTafarelBS :)" >
+        <img onclick="myFunction()" src="./assets/img/logo.svg" alt="LucasTafarelBS :)" >
       </a>
-      <a href="javascript:void(0);"  class="icon" onclick="myFunction(0)">&#9776;</a>
+      <a href="javascript:void(0);"  class="icon" onclick="myFunction()">&#9776;</a>
   </span>
   <div class="menu" id="myTopnav">
-    <a href="#about" onclick="myFunction(1)">Sobre</a>
-    <a href="#news" onclick="myFunction(1)">Novidades</a>
-    <a href="#experience" onclick="myFunction(1)">Experiência</a>
-    <a href="#contact" onclick="myFunction(1)">Contato</a>
-    <a href="blog" onclick="myFunction(1)">Blog</a>
+    <a href="#about" onclick="myFunction()">Sobre</a>
+    <a href="#blog" onclick="myFunction()">Blog</a>
+    <a href="#portfolio" onclick="myFunction()">Portfólio</a>
+    <a href="#contact" onclick="myFunction()">Contato</a>
+
   </div>
 </header>
 
@@ -70,13 +69,11 @@
     }
   }
 
-  function myFunction(modificar) {
+  function myFunction() {
     let myTopNav = document.getElementById('myTopnav')
     let barra = document.getElementById('barra')
-    if ( !modificar ) {
-      modification(myTopNav, 'menu', 'responsive')
-      modification(barra, 'barra', 'responsive')
-    }
+    modification(myTopNav, 'menu', 'responsive')
+    modification(barra, 'barra', 'responsive')
   }
 </script>
 

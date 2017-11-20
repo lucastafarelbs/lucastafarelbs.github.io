@@ -5,23 +5,39 @@
   background-attachment fixed
   background-size cover
   background-color #464646
+  filter contrast(120%)
+  opacity 0.8
+}
+
+#about {
+  .section-content {
+    margin-top auto
+    margin-bottom 1em
+  }
+}
+
+.dark{
+  background-color red
+  opacity 0.2
+  min-width 100vw
+  min-height 100vh
+  flexIt(column)
 }
 
 .avatar {
-  margin-top 0.8rem
-  width 40%
-  max-width 200px
+  margin 0.83rem 0px;
+  max-width 150px
   border-radius 100%
   box-shadow 3px 3px 15px 2px rgba($black,0.5)
 }
 
 .presentation{
   color $secondary
-  text-shadow 1px 1px 1px rgba(black, 0.6)
-  font-weight normal
-  max-width 100%
+  text-shadow 1px 1px 1px rgba($black, 0.6)
+  font-weight lighter
+  max-width 90%
   overflow hidden
-  margin-top 0.8rem
+  text-align center
 }
 
 +above($mobile){
@@ -30,8 +46,13 @@
   }
 }
 
-+above($tablet){
-  .presentation{
-      max-width 60%
++above($tablet) {
+  #about {
+    .section-content {
+      margin-bottom 3em
+    }
+  }
+  .presentation {
+    max-width 60%
   }
 }

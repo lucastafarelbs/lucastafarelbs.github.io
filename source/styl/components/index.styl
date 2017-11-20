@@ -4,7 +4,9 @@
   overflow-x hidden
 }
 
-#contact{background-color: #789}
+#contact{
+  background-color: #789
+}
 
 section {
   min-width 100vw
@@ -12,12 +14,41 @@ section {
   flexIt(column)
 }
 
-.section-content {
-  width 100%
-  flexIt(column)
-  margin-top $topbarHeight
+section:nth-child(even){
+  background-color rgba(blue,0.2)
 }
 
-+above($tablet)
+section:nth-child(odd){
+  background-color rgba(green,0.1)
+}
+
+.section-content {
+  width 100%
+  min-width 100vw
+  min-height 100vh
+  flexIt(column)
+  margin-top $topbarHeight
+  padding-top ($topbarHeight/1.5)
+
+}
+
+.header
+  flexIt(column)
+  .title
+    color rgba($primary,0.4)
+    line-height 1em
+  .sub-title
+    color rgba($primary,0.3)
+    letter-spacing 0.2rem
+    font-weight lighter
+
+
++above( $tablet )
   .section-content
-    margin-top 0
+    margin-top $topbarHeight
+    padding 0px
+
++above( $laptop )
+  .section-content
+    margin-top 0px
+    padding 0px

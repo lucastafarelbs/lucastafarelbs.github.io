@@ -80,4 +80,4 @@ gulp.task('watch', function () {
 });
 
 // Default Task
-gulp.task('default', ['js', 'stylus', 'imagemin', 'watch', 'browser-sync']);
+gulp.task('default', ['js', 'imagemin', 'stylus', 'watch', 'browser-sync']);

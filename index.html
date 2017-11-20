@@ -1,88 +1,79 @@
 ---
 layout: default
 ---
-  <section id="about">
-    <span class="section-content section-content-specific">
-      <img class="avatar" src="./assets/img/avatar.jpg" alt="Lucas">
-      <h4 class="presentation">
-        Olá pessoa, me chamo Lucas Tafarel, desenvolvedor full stack apaixonado
-        por tecnologia, pela natureza em todas as suas formas e outras coisas legais,
-        aqui você encontrará meus últimos trabalhos, as postagens
-        mais recentes no blog e meus contatos.
-      </h4>
-    </span>
-  </section>
-  <section id="news">
-    <span class="section-content">
-      <h2 class="news-title">O QUE HÁ DE NOVO?</h2>
-      <span class="container-news">
-        <!--  -->
-        <div class="news-post" onclick="testando('/blog/#teste')">
-          <img class="image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"/>
-          <h1 class="title"> <strong>NodeJS for Dummies :) </strong></h1>
-          <p class="description"> Muito conteúdo confuso ? vem comigo !</p>
-          <p class="data"> Por [autor] em [data] | [compartilhamentos] </p>
-        </div>
+<section id="about">
+  <div class="section-content">
+    <img class="avatar" src="./assets/img/avatar.jpg" alt="Lucas">
+    <h4 class="presentation">
+          Olá pessoa, me chamo Lucas Tafarel, desenvolvedor full stack apaixonado
+          por tecnologia, pela natureza em todas as suas formas e outras coisas legais,
+          aqui você encontrará meus últimos trabalhos, as postagens
+          mais recentes no blog e meus contatos.
+        </h4>
+    <br>
+    <h3>
+          <a style="text-decoration: none;color:white" href="twitter.com/lucastafarelbs">Twitter |</a>
+          <a style="text-decoration: none;color:white" href="telegram.com/lucastafarelbs">Telegram |</a>
+          <a style="text-decoration: none;color:white" href="github.com/lucastafarelbs">Github |</a>
+        </h3>
+  </div>
+</section>
 
+<section id="blog">
+  <span class="section-content">
+      <div class="header">
+        <h1 class="title">BLOG</h2>
+        <h3 class="sub-title">O QUE HÁ DE NOVO?</h3>
+      </div>
+      <span class="container-blog">
         <!--  -->
-        <div class="news-post">
-          <img class="image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"/>
-          <h1 class="title"> <strong>NodeJS for Dummies :) </strong></h1>
-          <p class="description"> Muito conteúdo confuso ? vem comigo !</p>
-          <p class="data"> Por [autor] em [data] | [compartilhamentos] </p>
+        <div class="blog-post" onclick="testando('/blog/#teste')">
+          <img class="blog-post-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"/>
+          <h3 class="blog-post-title"> NODEJS for dummies </h3>
+          <p class="blog-post-description"> dmaspdmosaimdiosa iojiodajsiodjiosajdoi oijjadoisjdoiasjd
+          asiodjsaoidjsaioj jioadjsiojdsa
+        jdioasjdoiasjdoiasjdiojasiodjasiojdioasjdoiajsi iajdsoijd</p>
         </div>
-
         <!--  -->
-        <div class="news-post">
-          <img class="image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"/>
-          <h1 class="title"> <strong>NodeJS for Dummies :) </strong></h1>
-          <p class="description"> Muito conteúdo confuso ? vem comigo !</p>
-          <p class="data"> Por [autor] em [data] | [compartilhamentos] </p>
+        <div class="blog-post" onclick="testando('/blog/#teste')">
+          <img class="blog-post-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"/>
+          <h3 class="blog-post-title"> NODEJS for dummies </h3>
+          <p class="blog-post-description"> Muito conteúdo confuso ? vem comigo !</p>
+        </div>
+        <!--  -->
+        <div class="blog-post" onclick="testando('/blog/#teste')">
+          <img class="blog-post-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"/>
+          <h3 class="blog-post-title"> NODEJS for dummies </h3>
+          <p class="blog-post-description"> Muito conteúdo confuso ? vem comigo !</p>
         </div>
       </span>
-    </span>
-  </section>
+  <a href="blog" class="older-posts">
+        <strong>Clique aqui</strong> e dê uma olhada nos posts mais antigos :)
+      </a>
+  </span>
+</section>
 
-  <section id="experience">
-    <span class="section-content">
-      <span class="experience-content">
-        <h2 class="experience-title"> MINHAS EXPERIÊNCIAS NESSA ÁREA LINDA &hearts; </h2>
-        <span class="experience-cont">
-
-          <span class="professional">
-            <h3 class="title">Profissionais</h3>
-            <span class="experience-post">
-              <div class="brick">
-              2
-              </div>
-              <div class="brick">
-              2
-              </div>
-              <!-- <div class="brick">
-              2
-              </div> -->
-            </span>
-
-            <span class="academics">
-              <h3 class="title">Acadêmicas</h3>
-              <span class="experience-post">
-                <div class="brick">
-                  1
-                </div>
-                <div class="brick">
-                  1
-                </div>
-               </span>
-            </span>
-
-          </span>
-        </span>
+<section id="portfolio">
+  <span class="section-content">
+      <div class="header">
+        <h1 class="title">PORTFOLIO</h2>
+        <h3 class="sub-title">MINHAS EXPERIÊNCIAS :)</h3>
+      </div>
+      <span class="experience-type-buttons">
+        <div class="professional-experience" onclick="mostrar(0)">
+          <img src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg" alt="">
+          <p> PROFISSIONAIS </p>
+        </div>
+        <div class="academics-experience" onclick="mostrar(1)">
+          <img src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg" alt="">
+          <p> ACADÊMICAS </p>
+        </div>
       </span>
-    </span>
-  </section>
+  </span>
+</section>
 
-  <section id="contact">
-    <span class="section-content">
+<section id="contact">
+  <span class="section-content">
       "contato"
     </span>
-  </section>
+</section>
