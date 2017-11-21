@@ -1,16 +1,20 @@
-#about{
-  background-image url(../img/background-img.jpg)
-  background-position center center
-  background-repeat no-repeat
-  background-attachment fixed
-  background-size cover
-  filter contrast(120%)
-  opacity 0.8
-}
-
 #about
-  -webkit-clip-path polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%)
-  clip-path polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%)
+  background-color rgba($primary, 0.05)
+  .background-image
+    -webkit-clip-path polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%)
+    clip-path polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%)
+    background-image url(../img/background-img.jpg)
+    background-position center center
+    background-repeat no-repeat
+    background-attachment fixed
+    background-size cover
+  .section-content {
+    background-color rgba($primary, 0.6)
+    opacity 0.9
+    filter contrast(120%)
+    margin-top 0px
+    height 100vh
+  }
 
 .about-container {
   flexIt(column)
