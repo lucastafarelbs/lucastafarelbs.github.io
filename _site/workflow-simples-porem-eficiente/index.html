@@ -179,7 +179,7 @@
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s1">'use strict'</span><span class="p">;</span>
 
 <span class="c1">//Dev dependencies</span>
-<span class="kr">const</span> <span class="nx">gulp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp'</span><span class="p">),</span>
+<span class="kd">const</span> <span class="nx">gulp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp'</span><span class="p">),</span>
       <span class="nx">plugins</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'gulp-load-plugins'</span><span class="p">)(),</span>
       <span class="nx">config</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./config.json'</span><span class="p">);</span>
 
@@ -213,15 +213,15 @@
 <p><code class="highlighter-rouge">config.json</code></p>
 
 <figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
-    </span><span class="nt">"tasksPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./tasks"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"stylusSrcFolder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./source/css"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"stylusDestFolder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./css"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"pugSrcFolder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./source"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"pugDestFolder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"jsSrcFolder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./source/js"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"jsDestFolder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./js"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"imgSrcFolder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./source/img"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"imgDestFolder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./img"</span><span class="w">
+    </span><span class="s2">"tasksPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./tasks"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"stylusSrcFolder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./source/css"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"stylusDestFolder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./css"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"pugSrcFolder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./source"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"pugDestFolder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"jsSrcFolder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./source/js"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"jsDestFolder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./js"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"imgSrcFolder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./source/img"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"imgDestFolder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./img"</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
 
 <p><code class="highlighter-rouge">browser-sync.js</code></p>
@@ -244,7 +244,7 @@
 <p><code class="highlighter-rouge">stylus.js</code></p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">gulp</span><span class="p">,</span> <span class="nx">plugins</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">jeet</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'jeet'</span><span class="p">),</span>
+    <span class="kd">const</span> <span class="nx">jeet</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'jeet'</span><span class="p">),</span>
           <span class="nx">rupture</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'rupture'</span><span class="p">),</span>
           <span class="nx">nib</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'nib'</span><span class="p">),</span>
           <span class="nx">prefixer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'autoprefixer-stylus'</span><span class="p">);</span>

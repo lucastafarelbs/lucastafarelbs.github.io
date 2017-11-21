@@ -138,14 +138,14 @@
 
 <p>Para criar um componente em um projeto Vue.js é muito simples. Basta criarmos um arquivo com o nome do nosso componente, por exemplo <code class="highlighter-rouge">Blog.vue</code> e importarmos ele no componente global ou especifico, ou nas configurações da nossa rota. O <code class="highlighter-rouge">Blog.vue</code> possui como código:</p>
 
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;template&gt;</span>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;template&gt;</span>
   <span class="nt">&lt;div&gt;</span>
     <span class="nt">&lt;h2&gt;</span>Blog<span class="nt">&lt;/h2&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/template&gt;</span>
 
 <span class="nt">&lt;script&gt;</span>
-<span class="kr">export</span> <span class="k">default</span> <span class="p">{</span>
+<span class="k">export</span> <span class="k">default</span> <span class="p">{</span>
 <span class="p">}</span>
 <span class="nt">&lt;/script&gt;</span>
 
@@ -155,8 +155,7 @@
   <span class="nl">color</span><span class="p">:</span> <span class="m">#c39e88</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nt">&lt;/style&gt;</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Onde, dentro das tags:</p>
 
@@ -194,21 +193,21 @@
 
 <p>Os 4 passos acima, você pode visualizar com mais calma no código abaixo:</p>
 
-<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="c1">// Importanto o Vue e vue-router</span>
-<span class="kr">import</span> <span class="nx">Vue</span> <span class="nx">from</span> <span class="s1">'vue'</span>
-<span class="kr">import</span> <span class="nx">VueRouter</span> <span class="nx">from</span> <span class="s1">'vue-router'</span>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Importanto o Vue e vue-router</span>
+<span class="k">import</span> <span class="nx">Vue</span> <span class="k">from</span> <span class="s1">'vue'</span>
+<span class="k">import</span> <span class="nx">VueRouter</span> <span class="k">from</span> <span class="s1">'vue-router'</span>
 
 <span class="c1">// Importanto os componentes da nossa aplicação</span>
-<span class="kr">import</span> <span class="nx">App</span> <span class="nx">from</span> <span class="s1">'./App.vue'</span>
-<span class="kr">import</span> <span class="nx">CcAbout</span> <span class="nx">from</span> <span class="s1">'./components/About.vue'</span>
-<span class="kr">import</span> <span class="nx">CcBlog</span> <span class="nx">from</span> <span class="s1">'./components/Blog.vue'</span>
-<span class="kr">import</span> <span class="nx">CcContact</span> <span class="nx">from</span> <span class="s1">'./components/Contact.vue'</span>
+<span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="s1">'./App.vue'</span>
+<span class="k">import</span> <span class="nx">CcAbout</span> <span class="k">from</span> <span class="s1">'./components/About.vue'</span>
+<span class="k">import</span> <span class="nx">CcBlog</span> <span class="k">from</span> <span class="s1">'./components/Blog.vue'</span>
+<span class="k">import</span> <span class="nx">CcContact</span> <span class="k">from</span> <span class="s1">'./components/Contact.vue'</span>
 
 <span class="c1">// Informamos ao Vue.js que iremos utilizar/trabalhar como vue-router</span>
 <span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">VueRouter</span><span class="p">)</span>
 
 <span class="c1">// Então, criamos as rotas</span>
-<span class="kr">const</span> <span class="nx">routes</span> <span class="o">=</span> <span class="p">[</span>
+<span class="kd">const</span> <span class="nx">routes</span> <span class="o">=</span> <span class="p">[</span>
   <span class="p">{</span>
     <span class="na">path</span><span class="p">:</span> <span class="s1">'/about'</span><span class="p">,</span>
     <span class="na">component</span><span class="p">:</span> <span class="nx">CcAbout</span>
@@ -223,7 +222,7 @@
   <span class="p">}</span>
 <span class="p">]</span>
 
-<span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">VueRouter</span><span class="p">({</span> <span class="nx">routes</span> <span class="p">})</span>
+<span class="kd">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">VueRouter</span><span class="p">({</span> <span class="nx">routes</span> <span class="p">})</span>
 
 <span class="c1">// Por fim, chamamos as rotas na nossa instância Vue.js</span>
 <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
@@ -231,8 +230,7 @@
   <span class="c1">// el: '#app',</span>
   <span class="na">render</span><span class="p">:</span> <span class="nx">h</span> <span class="o">=&gt;</span> <span class="nx">h</span><span class="p">(</span><span class="nx">App</span><span class="p">)</span>
 <span class="p">}).</span><span class="nx">$mount</span><span class="p">(</span><span class="s1">'#app'</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Pronto, as nossas rotas estão prontas! Apenas com isso aí? Sim, só isso! Lógico, se seu projeto possui mais rotas, isso vai aumentar. Mas basicamente é assim que criamos rotas com <strong>Vue.js</strong> e <strong>vue-router</strong>! Muito fácil, né?!</p>
 
