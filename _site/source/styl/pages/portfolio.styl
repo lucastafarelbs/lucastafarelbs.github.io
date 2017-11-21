@@ -1,0 +1,53 @@
+.portfolios
+  flexIt(column)
+
+.portfolio-container
+  flexIt(column)
+  margin-top 5rem
+
+.portfolio-title
+  color rgba( $primary,0.3 )
+  letter-spacing 0.1rem
+  font-weight lighter
+
+.portfolio-container-posts
+  flexIt(column)
+  margin-top 1rem
+
+.portfolio-title
+  color rgba($primary, 0.4)
+
++above($tablet)
+  .portfolio-container-posts
+    flexIt(row, space-around, flex-start)
+
+.portfolio-buttons
+  flexIt( row, space-evenly )
+  margin-top 5rem
+  border-radius 5px
+  background-color rgba($primary, 0.1)
+  font-size $h4FontSize
+  .button
+    flexIt( row )
+    color rgba($primary, 0.2)
+    cursor pointer
+    padding 10px 20px
+    background-color rgba($primary, 0.1)
+    p
+      margin-left 10px
+
+.portfolio-buttons
+  .button:nth-child(odd)
+    margin-right 1px
+  .button:nth-child(even)
+    margin-left 1px
+  .button:hover
+    background-color rgba($primary, 0.4) !important
+    color rgba($secondary, 0.8) !important
+
+.active
+  background-color rgba($primary, 0.2) !important
+  color rgba($primary, 0.6) !important
+
+.invisible
+  display none !important

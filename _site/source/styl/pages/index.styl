@@ -1,0 +1,52 @@
+*{
+  margin 0px
+  padding 0px
+  overflow-x hidden
+}
+
+#contact{
+  background-color: #789
+}
+
+section {
+  min-width 100vw
+  min-height 100vh
+  flexIt(column)
+}
+
+section:nth-child(even){
+  background-color rgba(blue,0.2)
+}
+
+section:nth-child( odd ){
+  background-color rgba(green,0.1)
+}
+
+.section-content {
+  width 100%
+  min-width 100vw
+  min-height 100vh
+  flexIt( column )
+  margin-top $topbarHeight
+}
+
+.header
+  flexIt( column )
+  .title
+    color rgba( $primary,0.4 )
+    line-height 1em
+  .sub-title
+    color rgba( $primary,0.3 )
+    letter-spacing 0.2rem
+    font-weight lighter
+
+
++above( $tablet )
+  .section-content
+    margin-top $topbarHeight
+    padding 0px
+
++above( $laptop )
+  .section-content
+    margin-top $topbarHeight
+    padding 0px

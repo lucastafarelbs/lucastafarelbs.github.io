@@ -1,0 +1,87 @@
+<span class="section-content">
+    <div class="header">
+      <h1 class="title">PORTFOLIO</h1>
+      <h2 class="sub-title">MINHAS EXPERIÊNCIAS :)</h2>
+    </div>
+      <span class="portfolio-container" id="portfolio-professional" >
+        <h3 class="portfolio-title">TRABALHOS MAIS RECENTES</h3>
+        <span class="portfolio-container-posts">
+          <div class="index-post-card" onclick="window.location.href = 'qargo.com.br'">
+            <img class="index-post-card-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg" alt="">
+            <h3 class="index-post-card-title">Qargo</h3>
+            <p class="index-post-card-description">Desenvolvimento de aplicativo Android e IOS</p>
+          </div>
+          <div class="index-post-card" onclick="window.location.href = 'qargo.com.br'">
+            <img class="index-post-card-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg" alt="">
+            <h3 class="index-post-card-title">QARGO</h3>
+            <p class="index-post-card-description">Desenvolvimento de aplicativo Android e IOS</p>
+          </div>
+          <div class="index-post-card" onclick="window.location.href = 'qargo.com.br'">
+            <img class="index-post-card-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg" alt="">
+            <h3 class="index-post-card-title">QARGO</h3>
+            <p class="index-post-card-description">Desenvolvimento de aplicativo Android e IOS</p>
+          </div>
+        </span>
+      </span>
+      <span class="portfolio-container invisible" id="portfolio-academics">
+        <h3 class="portfolio-title">VIDA ACADÊMICA</h3>
+        <span class="portfolio-container-posts">
+          <div class="index-post-card" onclick="window.location.href = 'qargo.com.br'">
+            <img class="index-post-card-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg" alt="">
+            <h3 class="index-post-card-title">Ciência da Computação</h3>
+            <p class="index-post-card-description">Desenvolvimento de aplicativo Android e IOS</p>
+          </div>
+          <div class="index-post-card" onclick="window.location.href = 'qargo.com.br'">
+            <img class="index-post-card-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg" alt="">
+            <h3 class="index-post-card-title">Ciência da Computação</h3>
+            <p class="index-post-card-description">Desenvolvimento de aplicativo Android e IOS</p>
+          </div>
+          <div class="index-post-card" onclick="window.location.href = 'qargo.com.br'">
+            <img class="index-post-card-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg" alt="">
+            <h3 class="index-post-card-title">Ciência da Computação</h3>
+            <p class="index-post-card-description">Desenvolvimento de aplicativo Android e IOS</p>
+          </div>
+        </span>
+      </span>
+
+      <div class="portfolio-buttons">
+        <span class="button active" id="btn-professional" onclick="selectType('professional')">
+          <i class=" fa fa-handshake-o "></i>
+          <p>PROFISSIONAL</p>
+        </span>
+        <span class="button" id="btn-academics" onclick="selectType('academics')">
+          <i class=" fa fa-graduation-cap "></i>
+          <p>ACADÊMICO</p>
+        </span>
+      </div>
+</span>
+
+<script>
+  const activate = ( toActive ) => {
+    activeButton = document.getElementById(`btn-${toActive}`)
+    activePortfolioContainer = document.getElementById(`portfolio-${toActive}`)
+    if (activeButton && !activeButton.className.includes('active'))
+      activeButton.className = `${activeButton.className} active`
+    if (activePortfolioContainer && activePortfolioContainer.className.includes('invisible'))
+      activePortfolioContainer.className = activePortfolioContainer.className.replace(/invisible/ig, '')
+  }
+  const inactivate = ( toInactive ) => {
+    inactiveButton = document.getElementById(`btn-${toInactive}`)
+    inactivePortfolioContainer = document.getElementById(`portfolio-${toInactive}`)
+    if (inactiveButton && inactiveButton.className.includes('active'))
+      inactiveButton.className = inactiveButton.className.replace(/active/ig, '')
+    if (inactivePortfolioContainer && !inactivePortfolioContainer.className.includes('invisible'))
+      inactivePortfolioContainer.className = `${inactivePortfolioContainer.className} invisible`
+  }
+
+  const selectType = ( type )  => {
+    if ( type && type.toLowerCase() === 'professional' ){
+      activate( 'professional' )
+      inactivate ( 'academics' )
+    }
+    else if ( type && type.toLowerCase() === 'academics' ){
+      activate ( 'academics' )
+      inactivate( 'professional' )
+    }
+  }
+</script>
