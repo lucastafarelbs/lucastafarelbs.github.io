@@ -17,10 +17,6 @@
 .portfolio-title
   color rgba($primary, 0.4)
 
-+above($tablet)
-  .portfolio-container-posts
-    flexIt(row, space-around, flex-start)
-
 .portfolio-buttons
   flexIt( row, space-evenly )
   margin-top 5rem
@@ -37,6 +33,7 @@
       margin-left 10px
 
 .portfolio-buttons
+  margin-bottom 10px
   .button:nth-child(odd)
     margin-right 1px
   .button:nth-child(even)
@@ -51,3 +48,7 @@
 
 .invisible
   display none !important
+
++above($tablet)
+  .portfolio-container-posts
+    flexIt(row, space-around, flex-start)

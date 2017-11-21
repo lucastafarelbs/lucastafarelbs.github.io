@@ -5,11 +5,12 @@ $vertical-rhythm =  ($baseLineHeight * $baseFontSize)
 
 $aFontSize = $baseFontSize
 $pFontSize = $baseFontSize
-$h1FontSize = 3em
-$h2FontSize = 2em
-$h3FontSize = 1.5em
-$h4FontSize = 1.1em
-$h5FontSize = 1em
+$h1FontSize = 3rem
+$h2FontSize = 2rem
+$h3FontSize = 1.5rem
+$h4FontSize = 1.1rem
+$h5FontSize = 1rem
+$h6FontSize = 0.8rem
 
 body
   line-height $baseLineHeight
@@ -30,34 +31,41 @@ label
   overflow hidden
 
 h1
-  font-size 3em
+  font-size $h1Font
   font-weight bold
   font-family $fontFamily
   overflow hidden
 
 h2
-  font-size 2em
+  font-size $h2Font
   font-weight medium
   font-family $fontFamily
   overflow hidden
 
 h3
-  font-size 1.5em
+  font-size $h3Font
   font-weight medium
   font-family $fontFamily
   overflow hidden
 
 h4
-  font-size 1.1em
+  font-size $h4Font
   font-weight medium
   font-family $fontFamily
   overflow hidden
 
 h5
-  font-size 1em
+  font-size $h5FontSize
   font-weight medium
   font-family $fontFamily
   overflow hidden
+
+h6
+  font-size $h6FontSize
+  font-weight medium
+  font-family $fontFamily
+  overflow hidden
+
 
 .page-container
   padding ($vertical-rhythm * 2) 2rem

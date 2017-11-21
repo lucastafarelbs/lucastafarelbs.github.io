@@ -1,1 +1,50 @@
-// #contact
+#contact
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 10%, 50% 0, 0 10%);
+  clip-path: polygon(0 100%, 100% 100%, 100% 10%, 50% 0, 0 10%);
+  .section-content
+    .header
+      .title
+        color rgba($secondary, 0.9)
+      .sub-title
+        color rgba($secondary, 0.9)
+  p
+    text-indent: 2em
+    margin-top: 10px
+  p + p
+    text-indent: 2em;
+    margin-top: 10px
+  p
+    b
+      color rgba($secondary, 0.9)
+
+.contact-me
+  margin-top 15px
+  max-width 90%
+  color rgba($secondary, 0.9)
+form
+  flexIt(column)
+  background-color red
+  width 90% !important
+  input
+    width 100%
+
+.contact-description
+  text-align justify
+  color rgba($secondary, 0.7)
+  font-size $h4FontSize
+  font-weight lighter
+  max-width 90%
+
++above($tablet)
+  .contact-description
+    max-width 80%
+  form
+    width 80% !important
+    background-color blue
+
++above($laptop)
+  form
+    width 60%
+    background-color yellow
+  .contact-description
+    max-width 60%
