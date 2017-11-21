@@ -12,6 +12,7 @@
 ">
 
     <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
 
     <link rel="canonical" href="lucastafarelbs.github.io/">
     <link rel="alternate" type="application/rss+xml" title="LucasTafarelBS :)" href="lucastafarelbs.github.io/feed.xml">
@@ -83,6 +84,7 @@
             <div class="content">
                 <section id="about">
   <div class="section-content">
+  <div class="about-container">
     <img class="avatar" src="./assets/img/avatar.jpg" alt="Lucas">
     <h4 class="presentation">
           Olá pessoa, me chamo Lucas Tafarel, desenvolvedor full stack apaixonado
@@ -91,76 +93,190 @@
           mais recentes no blog e meus contatos.
         </h4>
     <br>
-    <h3>
-          <a style="text-decoration: none;color:white" href="twitter.com/lucastafarelbs">Twitter |</a>
-          <a style="text-decoration: none;color:white" href="telegram.com/lucastafarelbs">Telegram |</a>
-          <a style="text-decoration: none;color:white" href="github.com/lucastafarelbs">Github |</a>
-        </h3>
+    <span class="social-media">
+  <div class="social-media-telegram" onclick="window.open('https://telegram.me/lucastafarelbs', '_blank')">
+    <i class="fa fa-telegram"></i>
   </div>
+
+  <div class="social-media-github" onclick="window.open('https://github.com/lucastafarelbs', '_blank')">
+    <i class="fa fa-github"></i>
+  </div>
+
+  <div class="social-media-twitter" onclick="window.open('https://twitter.com/lucastafarelbs', '_blank')">
+    <i class="fa fa-twitter"></i>
+  </div>
+</span>
+
+  </div>
+</div>
+
 </section>
 
 <section id="blog">
   <span class="section-content">
-      <div class="header">
-        <h1 class="title">BLOG</h2>
-        <h3 class="sub-title">O QUE HÁ DE NOVO?</h3>
+    <div class="header">
+      <h1 class="title">BLOG</h1>
+      <h2 class="sub-title">O QUE HÁ DE NOVO? VEJA AÍ :)</h2>
+    </div>
+    <span class="container-blog">
+      <!--  -->
+      <div class="index-post-card" onclick="testando('/blog/#teste')">
+        <img class="index-post-card-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"/>
+        <h3 class="index-post-card-title"> NODEJS for dummies </h3>
+        <p class="index-post-card-description"> dmaspdmosaimdiosa iojiodajsiodjiosajdoi oijjadoisjdoiasjd
+        asiodjsaoidjsaioj jioadjsiojdsa
+      jdioasjdoiasjdoiasjdiojasiodjasiojdioasjdoiajsi iajdsoijd</p>
       </div>
-      <span class="container-blog">
-        <!--  -->
-        <div class="blog-post" onclick="testando('/blog/#teste')">
-          <img class="blog-post-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"/>
-          <h3 class="blog-post-title"> NODEJS for dummies </h3>
-          <p class="blog-post-description"> dmaspdmosaimdiosa iojiodajsiodjiosajdoi oijjadoisjdoiasjd
-          asiodjsaoidjsaioj jioadjsiojdsa
-        jdioasjdoiasjdoiasjdiojasiodjasiojdioasjdoiajsi iajdsoijd</p>
-        </div>
-        <!--  -->
-        <div class="blog-post" onclick="testando('/blog/#teste')">
-          <img class="blog-post-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"/>
-          <h3 class="blog-post-title"> NODEJS for dummies </h3>
-          <p class="blog-post-description"> Muito conteúdo confuso ? vem comigo !</p>
-        </div>
-        <!--  -->
-        <div class="blog-post" onclick="testando('/blog/#teste')">
-          <img class="blog-post-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"/>
-          <h3 class="blog-post-title"> NODEJS for dummies </h3>
-          <p class="blog-post-description"> Muito conteúdo confuso ? vem comigo !</p>
-        </div>
-      </span>
-  <a href="blog" class="older-posts">
-        <strong>Clique aqui</strong> e dê uma olhada nos posts mais antigos :)
-      </a>
-  </span>
+      <!--  -->
+      <div class="index-post-card" onclick="testando('/blog/#teste')">
+        <img class="index-post-card-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"/>
+        <h3 class="index-post-card-title"> NODEJS for dummies </h3>
+        <p class="index-post-card-description"> Muito conteúdo confuso ? vem comigo !</p>
+      </div>
+      <!--  -->
+      <div class="index-post-card" onclick="testando('/blog/#teste')">
+        <img class="index-post-card-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"/>
+        <h3 class="index-post-card-title"> NODEJS for dummies </h3>
+        <p class="index-post-card-description"> Muito conteúdo confuso ? vem comigo !</p>
+      </div>
+    </span>
+    <a href="blog" class="older-posts">
+      <strong>Clique aqui</strong> e dê uma olhada nos posts mais antigos :)
+    </a>
+</span>
+
 </section>
 
 <section id="portfolio">
   <span class="section-content">
-      <div class="header">
-        <h1 class="title">PORTFOLIO</h2>
-        <h3 class="sub-title">MINHAS EXPERIÊNCIAS :)</h3>
-      </div>
-      <span class="experience-type-buttons">
-        <div class="professional-experience" onclick="mostrar(0)">
-          <img src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg" alt="">
-          <p> PROFISSIONAIS </p>
-        </div>
-        <div class="academics-experience" onclick="mostrar(1)">
-          <img src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg" alt="">
-          <p> ACADÊMICAS </p>
-        </div>
+    <div class="header">
+      <h1 class="title">PORTFOLIO</h1>
+      <h2 class="sub-title">MINHAS EXPERIÊNCIAS :)</h2>
+    </div>
+      <span class="portfolio-container" id="portfolio-professional" >
+        <h3 class="portfolio-title">TRABALHOS MAIS RECENTES</h3>
+        <span class="portfolio-container-posts">
+          <div class="index-post-card" onclick="window.location.href = 'qargo.com.br'">
+            <img class="index-post-card-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg" alt="">
+            <h3 class="index-post-card-title">Qargo</h3>
+            <p class="index-post-card-description">Desenvolvimento de aplicativo Android e IOS</p>
+          </div>
+          <div class="index-post-card" onclick="window.location.href = 'qargo.com.br'">
+            <img class="index-post-card-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg" alt="">
+            <h3 class="index-post-card-title">QARGO</h3>
+            <p class="index-post-card-description">Desenvolvimento de aplicativo Android e IOS</p>
+          </div>
+          <div class="index-post-card" onclick="window.location.href = 'qargo.com.br'">
+            <img class="index-post-card-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg" alt="">
+            <h3 class="index-post-card-title">QARGO</h3>
+            <p class="index-post-card-description">Desenvolvimento de aplicativo Android e IOS</p>
+          </div>
+        </span>
       </span>
-  </span>
+      <span class="portfolio-container invisible" id="portfolio-academics">
+        <h3 class="portfolio-title">VIDA ACADÊMICA</h3>
+        <span class="portfolio-container-posts">
+          <div class="index-post-card" onclick="window.location.href = 'qargo.com.br'">
+            <img class="index-post-card-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg" alt="">
+            <h3 class="index-post-card-title">Ciência da Computação</h3>
+            <p class="index-post-card-description">Desenvolvimento de aplicativo Android e IOS</p>
+          </div>
+          <div class="index-post-card" onclick="window.location.href = 'qargo.com.br'">
+            <img class="index-post-card-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg" alt="">
+            <h3 class="index-post-card-title">Ciência da Computação</h3>
+            <p class="index-post-card-description">Desenvolvimento de aplicativo Android e IOS</p>
+          </div>
+          <div class="index-post-card" onclick="window.location.href = 'qargo.com.br'">
+            <img class="index-post-card-image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg" alt="">
+            <h3 class="index-post-card-title">Ciência da Computação</h3>
+            <p class="index-post-card-description">Desenvolvimento de aplicativo Android e IOS</p>
+          </div>
+        </span>
+      </span>
+
+      <div class="portfolio-buttons">
+        <span class="button active" id="btn-professional" onclick="selectType('professional')">
+          <i class=" fa fa-handshake-o "></i>
+          <p>PROFISSIONAL</p>
+        </span>
+        <span class="button" id="btn-academics" onclick="selectType('academics')">
+          <i class=" fa fa-graduation-cap "></i>
+          <p>ACADÊMICO</p>
+        </span>
+      </div>
+</span>
+
+<script>
+  const activate = ( toActive ) => {
+    activeButton = document.getElementById(`btn-${toActive}`)
+    activePortfolioContainer = document.getElementById(`portfolio-${toActive}`)
+    if (activeButton && !activeButton.className.includes('active'))
+      activeButton.className = `${activeButton.className} active`
+    if (activePortfolioContainer && activePortfolioContainer.className.includes('invisible'))
+      activePortfolioContainer.className = activePortfolioContainer.className.replace(/invisible/ig, '')
+  }
+  const inactivate = ( toInactive ) => {
+    inactiveButton = document.getElementById(`btn-${toInactive}`)
+    inactivePortfolioContainer = document.getElementById(`portfolio-${toInactive}`)
+    if (inactiveButton && inactiveButton.className.includes('active'))
+      inactiveButton.className = inactiveButton.className.replace(/active/ig, '')
+    if (inactivePortfolioContainer && !inactivePortfolioContainer.className.includes('invisible'))
+      inactivePortfolioContainer.className = `${inactivePortfolioContainer.className} invisible`
+  }
+
+  const selectType = ( type )  => {
+    if ( type && type.toLowerCase() === 'professional' ){
+      activate( 'professional' )
+      inactivate ( 'academics' )
+    }
+    else if ( type && type.toLowerCase() === 'academics' ){
+      activate ( 'academics' )
+      inactivate( 'professional' )
+    }
+  }
+</script>
+
 </section>
 
 <section id="contact">
   <span class="section-content">
-      "contato"
-    </span>
-</section>
+    <div class="header">
+      <h1 class="title">CONTATO</h1>
+      <h2 class="sub-title"> VAMOS TROCAR UMAS IDEIAS :)</h2>
+    </div>
+    <p class="contact-description">
+      Posso te ajudar se você estiver precisando de alguma solução tecnológica,
+      seja um aplicativo, um sistema personalizado, ou ainda soluções em Internet das Coisas,
+      podemos chegar juntos à solução ideal para o seu caso e reunir a melhor equipe para
+      este novo projeto. Vamos trocar uma ideia, inovação move o mundo.
+    </p>
+    <p class="contact-description">
+      Se ficou com alguma dúvida acerca do conteúdo postado ou dejesa sugerir uma
+      melhoria não hesite em me contatar. Ficarei feliz em respondê-lo.
+    </p>
+    <p> Você pode me encontrar aqui: </p>
+    <span class="social-media">
+  <div class="social-media-telegram" onclick="window.open('https://telegram.me/lucastafarelbs', '_blank')">
+    <i class="fa fa-telegram"></i>
+  </div>
 
-            </div>
+  <div class="social-media-github" onclick="window.open('https://github.com/lucastafarelbs', '_blank')">
+    <i class="fa fa-github"></i>
+  </div>
 
-            <footer class="footer">
+  <div class="social-media-twitter" onclick="window.open('https://twitter.com/lucastafarelbs', '_blank')">
+    <i class="fa fa-twitter"></i>
+  </div>
+</span>
+
+    <p> Ou pode me mandar uma mensagem por aqui mesmo </p>
+    <form method="POST" action="http://formspree.io/lucastafarelbs@gmail.com">
+      <input type="email" name="email" placeholder="Your email">
+      <textarea name="message" placeholder="Your message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+</span>
+<footer class="footer">
   <div class="text">
     <p class="title">
       Feito com &hearts; e [Coffee] . Hospedado por
@@ -172,6 +288,23 @@
   </div>
 </footer>
 
+
+</section>
+
+            </div>
+
+            <!-- <footer class="footer">
+  <div class="text">
+    <p class="title">
+      Feito com &hearts; e [Coffee] . Hospedado por
+      <a href="https://pages.github.com/" target="_blank" title="Clique aqui para ir para o site do GitHub Pages">
+          GitHub Pages
+        </a>
+      <a href="https://jekyllrb.com/" target="_blank" title="Clique aqui para ir pra página oficial do Jekyll">Jekyll</a>.
+    </p>
+  </div>
+</footer>
+ -->
         </div><!-- fim do /.container -->
     </div><!-- fim do /.wrapper -->
 </body>
