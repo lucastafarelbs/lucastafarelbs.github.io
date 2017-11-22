@@ -7,9 +7,9 @@
   .section-content
     .header
       .title
-        color rgba($secondary, 0.9)
+        color rgba($secondary, 0.8)
       .sub-title
-        color rgba($secondary, 0.9)
+        color rgba($secondary, 0.6)
   p
     text-indent: 2em
     margin-top: 10px
@@ -29,7 +29,7 @@ form
   width 90% !important
   margin-top 10px
   input, textarea
-    padding-left 5px
+    padding 5px 10px
     width 90%
     font-size $h4FontSize !important
     color rgba($secondary, 0.8)
@@ -38,7 +38,6 @@ form
     border-bottom 1px solid rgba($primary, 0.8)
     border-radius 5px
   textarea
-    font-size $h4FontSize !important
     resize none
     margin 10px
     height 120px
@@ -64,9 +63,6 @@ form
     background-color rgba($secondary, 0.4) !important
     color rgba($primary, 0.8) !important
 
-
-
-
 .contact-description
   text-align justify
   color rgba($secondary, 0.7)
@@ -78,10 +74,10 @@ form
   .contact-description
     max-width 80%
   form
-    width 80% !important
+    width 50% !important
 
 +above($laptop)
-  form
-    width 60%
   .contact-description
     max-width 60%
+  form
+    width 40% !important
