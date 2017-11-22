@@ -80,8 +80,4 @@ gulp.task('watch', function () {
 });
 
 // Default Task
-<<<<<<< HEAD
-gulp.task('default', ['js', 'stylus', 'imagemin', 'watch', 'browser-sync']);
-=======
 gulp.task('default', ['js', 'imagemin', 'stylus', 'watch', 'browser-sync']);
->>>>>>> novoLayout
