@@ -43,6 +43,7 @@
 
 
 <body>
+<<<<<<< HEAD
      <header class="barra">
   <span class="logo-container">
       <a href="#">
@@ -56,6 +57,23 @@
     <a href="#experience" onclick="myFunction(1)">Experiência</a>
     <a href="#contact" onclick="myFunction(1)">Contato</a>
     <a href="blog" onclick="myFunction(1)">Blog</a>
+=======
+     <header class="barra" id="barra">
+  <span class="logo-container" >
+      <a href="#" class="logotipo" >
+        <img onclick="responsiveIt()" src="./assets/img/logo.svg" alt="LucasTafarelBS :)" >
+      </a>
+      <a href="javascript:void(0);"  class="icon" onclick="responsiveIt()">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </a>
+  </span>
+  <div class="menu" id="myTopnav">
+    <a href="#about" onclick="responsiveIt()">Sobre</a>
+    <a href="#blog" onclick="responsiveIt()">Blog</a>
+    <a href="#portfolio" onclick="responsiveIt()">Portfólio</a>
+    <a href="#contact" onclick="responsiveIt()">Contato</a>
+
+>>>>>>> novoLayout
   </div>
 </header>
 
@@ -72,7 +90,7 @@
     }
   }
 
-  function myFunction() {
+  function responsiveIt() {
     let myTopNav = document.getElementById('myTopnav')
     let barra = document.getElementById('barra')
     modification(myTopNav, 'menu', 'responsive')
@@ -80,7 +98,7 @@
   }
 
   window.addEventListener('scroll', function (event) {
-      if (event.target.scrollingElement.scrollTop && event.target.scrollingElement.scrollTop >= 200 ) {
+      if (event.target.scrollingElement.scrollTop && event.target.scrollingElement.scrollTop >= 100 ) {
           let barra = document.getElementById('barra')
           if (barra && !barra.className.includes('sticky'))
             barra.className = `${barra.className} sticky`
@@ -103,6 +121,7 @@
       window.location = msg
   </script>
 
+<<<<<<< HEAD
   <section id="about">
     <span class="section-content">
       <img class="avatar" src="./assets/img/avatar.jpg" alt="Lucas">
@@ -178,6 +197,89 @@
             </span>
 
           </span>
+=======
+</div>
+
+</section>
+
+<section id="blog">
+  <span class="section-content">
+    <div class="header">
+      <h1 class="title">BLOG</h1>
+      <h2 class="sub-title">POSTS MAIS ATUAIS</h2>
+    </div>
+    <span class="container-blog">
+      <!--  -->
+      <div class="index-post-card" onclick="testando('/blog/#teste')">
+        <img class="index-post-card-image" src=""/>
+        <h3 class="index-post-card-title"> Postagem </h3>
+        <p class="index-post-card-description"> Em breve.</p>
+      </div>
+      <!--  -->
+      <div class="index-post-card" onclick="testando('/blog/#teste')">
+        <img class="index-post-card-image" src=""/>
+        <h3 class="index-post-card-title"> Postagem </h3>
+        <p class="index-post-card-description"> Em breve.</p>
+      </div>
+      <!--  -->
+      <div class="index-post-card" onclick="testando('/blog/#teste')">
+        <img class="index-post-card-image" src=""/>
+        <h3 class="index-post-card-title"> Postagem </h3>
+        <p class="index-post-card-description"> Em breve.</p>
+      </div>
+    </span>
+    <a href="blog" class="older-posts">
+      <strong>Clique aqui</strong> e dê uma olhada nos posts mais antigos :)
+    </a>
+</span>
+
+</section>
+
+<section id="portfolio">
+  <span class="section-content">
+    <div class="header">
+      <h1 class="title">PORTFOLIO</h1>
+      <h2 class="sub-title">MINHAS EXPERIÊNCIAS :)</h2>
+    </div>
+      <span class="portfolio-container" id="portfolio-professional" >
+        <h3 class="portfolio-title">TRABALHOS MAIS RECENTES</h3>
+        <span class="portfolio-container-posts">
+          <div class="index-post-card" onclick="window.open('http://www.qargo.com.br','_blank')">
+            <img class="index-post-card-image" src="./assets/img/logo-qargo.png" alt="">
+            <h3 class="index-post-card-title">Qargo</h3>
+            <p class="index-post-card-description">Solução para logística, analista desenvolvedor de aplicativo ANDROID e IOS</p>
+          </div>
+          <div class="index-post-card" onclick="window.open('http://www.qargo.com.br','_blank')">
+            <img class="index-post-card-image" src="./assets/img/logo-qargo.png" alt="">
+            <h3 class="index-post-card-title">QARGO</h3>
+            <p class="index-post-card-description">Solução para logística, analista desenvolvedor de dashboard administrativo</p>
+          </div>
+          <div class="index-post-card" onclick="window.open('https://tulipaerp.com.br/','_blank')">
+            <img class="index-post-card-image" src="/assets/img/logo-tulipa.png" alt="teste">
+            <h3 class="index-post-card-title">NOVALIS TECNOLOGIA</h3>
+            <p class="index-post-card-description">Integrante da equipe de desenvolvimento e manutenção do TULIPA ERP</p>
+          </div>
+        </span>
+      </span>
+      <span class="portfolio-container invisible" id="portfolio-academics">
+        <h3 class="portfolio-title">VIDA ACADÊMICA</h3>
+        <span class="portfolio-container-posts">
+          <div class="index-post-card">
+            <img class="index-post-card-image" src="./assets/img/logo-palestra.png" alt="">
+            <h3 class="index-post-card-title">PALESTRAS</h3>
+            <p class="index-post-card-description">Palestrei em duas ocasiões sobre TECNOLOGIA LIVRE, comunidade, carreira e JAVASCRPIT <i class="fa fa-heart"></i>.</p>
+          </div>
+          <div class="index-post-card">
+            <img class="index-post-card-image" src="./assets/img/logo-anhanguera.png" alt="">
+            <h3 class="index-post-card-title">CIÊNCIA DA COMPUTAÇÃO</h3>
+            <p class="index-post-card-description">Faculdade Anhanguera - Limeira, concluído em 2016.</p>
+          </div>
+          <div class="index-post-card">
+            <img class="index-post-card-image" src="./assets/img/logo-cotil.png" alt="">
+            <h3 class="index-post-card-title">TÉCNICO EM INFORMÁTICA</h3>
+            <p class="index-post-card-description">UNICAMP-COTIL, concluído em 2012.</p>
+          </div>
+>>>>>>> novoLayout
         </span>
       </span>
     </span>

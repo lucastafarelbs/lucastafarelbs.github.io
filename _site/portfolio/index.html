@@ -43,6 +43,7 @@
 
 
 <body>
+<<<<<<< HEAD
      <header class="barra">
   <span class="logo-container">
       <a href="#">
@@ -56,6 +57,23 @@
     <a href="#experience" onclick="myFunction(1)">Experiência</a>
     <a href="#contact" onclick="myFunction(1)">Contato</a>
     <a href="blog" onclick="myFunction(1)">Blog</a>
+=======
+     <header class="barra" id="barra">
+  <span class="logo-container" >
+      <a href="#" class="logotipo" >
+        <img onclick="responsiveIt()" src="./assets/img/logo.svg" alt="LucasTafarelBS :)" >
+      </a>
+      <a href="javascript:void(0);"  class="icon" onclick="responsiveIt()">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </a>
+  </span>
+  <div class="menu" id="myTopnav">
+    <a href="#about" onclick="responsiveIt()">Sobre</a>
+    <a href="#blog" onclick="responsiveIt()">Blog</a>
+    <a href="#portfolio" onclick="responsiveIt()">Portfólio</a>
+    <a href="#contact" onclick="responsiveIt()">Contato</a>
+
+>>>>>>> novoLayout
   </div>
 </header>
 
@@ -72,7 +90,7 @@
     }
   }
 
-  function myFunction() {
+  function responsiveIt() {
     let myTopNav = document.getElementById('myTopnav')
     let barra = document.getElementById('barra')
     modification(myTopNav, 'menu', 'responsive')
@@ -80,7 +98,7 @@
   }
 
   window.addEventListener('scroll', function (event) {
-      if (event.target.scrollingElement.scrollTop && event.target.scrollingElement.scrollTop >= 200 ) {
+      if (event.target.scrollingElement.scrollTop && event.target.scrollingElement.scrollTop >= 100 ) {
           let barra = document.getElementById('barra')
           if (barra && !barra.className.includes('sticky'))
             barra.className = `${barra.className} sticky`
