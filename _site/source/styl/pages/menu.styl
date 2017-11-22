@@ -8,10 +8,16 @@
   a{
     color $secondary;
     font-size $h4FontSize
-    text-shadow 1px 1px 1px rgba(black, 0.3)
+    text-shadow 1px 1px 1px rgba($primary, 0.3)
   }
   min-height: $topbarHeight
   margin-top: 4%
+}
+
+.sticky{
+  transition-duration all 4s
+  margin-top 0px !important
+  background-color rgba($primary, 0.8)
 }
 
 .logo-container{
@@ -51,8 +57,8 @@
 
 hoverOnLink() {
   a:hover {
-    background-color: rgba($white,0.5);
-    color: $white;
+    background-color: rgba($secondary,0.8);
+    color: $secondary;
   }
 }
 
@@ -74,12 +80,7 @@ hoverOnLink() {
   .barra{
     margin-top 0px;
     flexIt(column, space-between, center)
-    background-color: rgba($black,0.6);
-  }
-  .barra.responsive {
-    .logo-container {
-      background-color rgba($black, 0.6)
-    }
+    background-color: rgba($primary,0.6);
   }
 
   .logo-container{
@@ -120,7 +121,10 @@ hoverOnLink() {
     width 100%;
   }
   .menu.responsive a:nth-child(odd) {
-    background-color: rgba($black,0.1);
+    background-color: rgba($secondary,0.3);
+  }
+  .menu.responsive a:nth-child(even) {
+    background-color: rgba($secondary,0.5);
   }
   .menu.responsive {
     hoverOnLink()

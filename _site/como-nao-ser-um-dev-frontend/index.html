@@ -75,6 +75,19 @@
     modification(myTopNav, 'menu', 'responsive')
     modification(barra, 'barra', 'responsive')
   }
+
+  window.addEventListener('scroll', function (event) {
+      if (event.target.scrollingElement.scrollTop && event.target.scrollingElement.scrollTop >= 200 ) {
+          let barra = document.getElementById('barra')
+          if (barra && !barra.className.includes('sticky'))
+            barra.className = `${barra.className} sticky`
+      }
+      else {
+        let barra = document.getElementById('barra')
+        if ( barra && barra.className.includes('sticky') )
+          barra.className = barra.className.replace( /sticky/, '' )
+      }
+  });
 </script>
 
 
