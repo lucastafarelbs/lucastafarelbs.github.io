@@ -1,104 +1,18 @@
 ---
 layout: default
 ---
-  <script type="text/javascript">
-    const testando = (msg) =>
-      window.location = msg
-  </script>
+<section id="about">
+  {% include sections/about.html %}
+</section>
 
-  <section id="about">
-    <span class="section-content">
-      <img class="avatar" src="./assets/img/avatar.jpg" alt="Lucas">
-      <h3 class="presentation">
-        Olá pessoa, me chamo Lucas Tafarel, desenvolvedor full stack apaixonado
-        por tecnologia, pela natureza em todas as suas formas e outras coisas legais,
-        aqui você encontrará meus últimos trabalhos, as postagens
-        mais recentes no blog e meus contatos.
-      </h3>
-    </span>
-  </section>
-  <section id="news">
-    <span class="section-content">
-      <h2 class="news-title">O QUE HÁ DE NOVO?</h2>
-      <span class="container-news">
-        <!--  -->
-        <div class="news-post" onclick="testando('/blog/#teste')">
-          <img class="image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"/>
-          <h1 class="title"> <strong>NodeJS for Dummies :) </strong></h1>
-          <p class="description"> Muito conteúdo confuso ? vem comigo !</p>
-          <p class="data"> Por [autor] em [data] | [compartilhamentos] </p>
-        </div>
+<section id="blog">
+  {% include sections/blog.html %}
+</section>
 
-        <!--  -->
-        <div class="news-post">
-          <img class="image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"/>
-          <h1 class="title"> <strong>NodeJS for Dummies :) </strong></h1>
-          <p class="description"> Muito conteúdo confuso ? vem comigo !</p>
-          <p class="data"> Por [autor] em [data] | [compartilhamentos] </p>
-        </div>
+<section id="portfolio">
+  {% include sections/portfolio.html %}
+</section>
 
-        <!--  -->
-        <div class="news-post">
-          <img class="image" src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"/>
-          <h1 class="title"> <strong>NodeJS for Dummies :) </strong></h1>
-          <p class="description"> Muito conteúdo confuso ? vem comigo !</p>
-          <p class="data"> Por [autor] em [data] | [compartilhamentos] </p>
-        </div>
-      </span>
-    </span>
-  </section>
-
-  <section id="experience">
-    <span class="section-content">
-      <span class="experience-content">
-        <h2 class="experience-title"> MINHAS EXPERIÊNCIAS NESSA ÁREA LINDA &hearts; </h2>
-        <span class="experience-cont">
-
-          <span class="professional">
-            <h3 class="title">Profissionais</h3>
-            <span class="experience-post">
-              <div class="brick">
-              2
-              </div>
-              <div class="brick">
-              2
-              </div>
-              <!-- <div class="brick">
-              2
-              </div> -->
-            </span>
-
-            <span class="academics">
-              <h3 class="title">Acadêmicas</h3>
-              <span class="experience-post">
-                <div class="brick">
-                  1
-                </div>
-                <div class="brick">
-                  1
-                </div>
-               </span>
-            </span>
-
-          </span>
-        </span>
-      </span>
-    </span>
-  </section>
-
-  <section id="contact">
-    <span class="section-content">
-      "contato"
-    </span>
-  </section>
-
-  <script>
-    function myFunction(modificar) {
-      var x = document.getElementById("myTopnav");
-      if (!modificar && (x.className === "menu")) {
-        x.className += " responsive";
-      } else {
-        x.className = "menu";
-      }
-    }
-  </script>
+<section id="contact">
+  {% include sections/contact.html %}
+</section>

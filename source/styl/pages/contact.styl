@@ -1,0 +1,87 @@
+#contact
+  background-color rgba($primary, 0.1)
+  .background
+    background-color #707070
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 10%, 50% 0, 0 10%);
+    clip-path: polygon(0 100%, 100% 100%, 100% 10%, 50% 0, 0 10%);
+  .section-content
+    .header
+      .title
+        color rgba($secondary, 0.9)
+      .sub-title
+        color rgba($secondary, 0.9)
+  p
+    text-indent: 2em
+    margin-top: 10px
+  p + p
+    text-indent: 2em;
+    margin-top: 10px
+  p
+    b
+      color rgba($secondary, 0.9)
+
+.contact-me
+  margin-top 15px
+  max-width 90%
+  color rgba($secondary, 0.9)
+form
+  flexIt(column)
+  width 90% !important
+  margin-top 10px
+  input, textarea
+    padding-left 5px
+    width 90%
+    font-size $h4FontSize !important
+    color rgba($secondary, 0.8)
+    background-color rgba($primary, 0.3)
+    border none
+    border-bottom 1px solid rgba($primary, 0.8)
+    border-radius 5px
+  textarea
+    font-size $h4FontSize !important
+    resize none
+    margin 10px
+    height 120px
+  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder
+    color rgba($secondary, 0.8)
+  input::-moz-placeholder, textarea::-moz-placeholder
+    opacity 1
+    color rgba($secondary, 0.8)
+  input:-ms-input-placeholder, textarea:-ms-input-placeholder
+    color rgba($secondary, 0.8)
+  input:-moz-placeholder, textarea:-moz-placeholder
+    color rgba($secondary, 0.8)
+  button
+    margin-bottom 20px
+    border none
+    border-radius 5px
+    color rgba($secondary, 0.6)
+    cursor pointer
+    padding 10px 20px
+    background-color rgba($primary, 0.1)
+    font-size $h4FontSize
+  button:hover
+    background-color rgba($secondary, 0.4) !important
+    color rgba($primary, 0.8) !important
+
+
+
+
+.contact-description
+  text-align justify
+  color rgba($secondary, 0.7)
+  font-size $h4FontSize
+  font-weight lighter
+  max-width 90%
+
++above($tablet)
+  .contact-description
+    max-width 80%
+  form
+    width 80% !important
+
++above($laptop)
+  form
+    width 60%
+  .contact-description
+    max-width 60%

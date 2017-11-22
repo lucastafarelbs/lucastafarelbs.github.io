@@ -1,0 +1,28 @@
+.index-post-card
+  flexIt(column)
+  // margin-top 3rem
+  max-width 100%
+  .index-post-card-image
+    border 3px solid rgba($primary, 0.2)
+    max-width 150px
+    border-radius 100%
+  .index-post-card-title
+    margin-top 5px
+    font-size $h4FontSize
+    font-weight bolder
+    color rgba($primary,0.4)
+  .index-post-card-description
+    font-weight medium
+    max-width 80%
+    text-align center
+    color rgba($primary,0.3)
+    margin-top 5px
+    line-height 1.3em
+    font-size $h5FontSize
+
++above($tablet)
+  .index-post-card
+    max-width 20%
+    // margin-top 0px !important
+    .index-post-card-description
+      max-width 90%

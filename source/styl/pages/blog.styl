@@ -1,0 +1,20 @@
+#blog
+  background-color rgba($primary, 0.05)
+.container-blog
+  flexIt(column)
+
+.older-posts
+  text-decoration none
+  margin-top 1.5rem
+  letter-spacing 0.2rem
+  color rgba($primary,0.4)
+  width 100%
+  text-align center
+  margin-bottom 20px
+
++above($tablet)
+  .container-blog
+    flexIt(row, space-around, flex-start)
+    margin-top 3rem
+  .older-posts
+    margin-top 3rem

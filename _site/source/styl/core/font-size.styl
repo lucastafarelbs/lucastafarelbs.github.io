@@ -1,41 +1,71 @@
+$fontFamily = 'Palanquin'
 $baseLineHeight = 1.4
 $baseFontSize = 1.25rem
 $vertical-rhythm =  ($baseLineHeight * $baseFontSize)
+
+$aFontSize = $baseFontSize
+$pFontSize = $baseFontSize
+$h1FontSize = 3rem
+$h2FontSize = 2rem
+$h3FontSize = 1.5rem
+$h4FontSize = 1.1rem
+$h5FontSize = 1rem
+$h6FontSize = 0.8rem
 
 body
   line-height $baseLineHeight
 
 a
-  font-size $baseFontSize
+  font-size $aFontSize
   font-family $fontFamily
   overflow hidden
 
 p
   font-size $baseFontSize
-  margin-bottom $vertical-rhythm
+  font-family $fontFamily
+  overflow hidden
+
+label
+  font-size $baseFontSize
   font-family $fontFamily
   overflow hidden
 
 h1
-  font-size 3em
-  margin-bottom ($vertical-rhythm * 2)
+  font-size $h1Font
   font-weight bold
   font-family $fontFamily
   overflow hidden
 
 h2
-  font-size 2em
-  margin-bottom $vertical-rhythm
+  font-size $h2Font
   font-weight medium
   font-family $fontFamily
   overflow hidden
 
 h3
-  font-size 1.5em
-  margin-bottom $vertical-rhythm
+  font-size $h3Font
   font-weight medium
   font-family $fontFamily
   overflow hidden
+
+h4
+  font-size $h4Font
+  font-weight medium
+  font-family $fontFamily
+  overflow hidden
+
+h5
+  font-size $h5FontSize
+  font-weight medium
+  font-family $fontFamily
+  overflow hidden
+
+h6
+  font-size $h6FontSize
+  font-weight medium
+  font-family $fontFamily
+  overflow hidden
+
 
 .page-container
   padding ($vertical-rhythm * 2) 2rem

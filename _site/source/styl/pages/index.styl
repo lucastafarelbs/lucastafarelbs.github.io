@@ -1,0 +1,53 @@
+*{
+  margin 0px
+  padding 0px
+  overflow-x hidden
+}
+
+*::-webkit-scrollbar-track
+	-webkit-box-shadow inset 0 0 2px rgba(0,0,0,0.3)
+	background-color $primary
+  padding 2px !important
+
+*::-webkit-scrollbar
+	width 7px
+  margin 10px
+
+*::-webkit-scrollbar-thumb
+	background-color rgba($secondary, 0.5)
+  border-radius 5px
+
+section {
+  min-width 100vw
+  min-height 100vh
+  flexIt(column)
+}
+
+.section-content {
+  width 100%
+  min-width 100vw
+  min-height 92.3vh
+  flexIt( column )
+  margin-top $topbarHeight
+}
+
+.header
+  flexIt( column )
+  .title
+    color rgba( $primary,0.4 )
+    line-height 1em
+  .sub-title
+    color rgba( $primary,0.3 )
+    letter-spacing 0.2rem
+    font-weight lighter
+
+
++above( $tablet )
+  .section-content
+    margin-top $topbarHeight
+    padding 0px
+
++above( $laptop )
+  .section-content
+    margin-top $topbarHeight
+    padding 0px

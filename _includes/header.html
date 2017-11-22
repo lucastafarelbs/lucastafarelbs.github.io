@@ -1,15 +1,34 @@
- <header class="barra">
-  <span class="logo-container">
-      <a href="#">
-        <img class="logotipo" onclick="myFunction(1)" src="./assets/img/logo.svg" alt="LucasTafarelBS :)" >
+ <header class="barra" id="barra">
+  <span class="logo-container" >
+      <a href="#" class="logotipo" >
+        <img onclick="myFunction()" src="./assets/img/logo.svg" alt="LucasTafarelBS :)" >
       </a>
       <a href="javascript:void(0);"  class="icon" onclick="myFunction()">&#9776;</a>
-    </span>
+  </span>
   <div class="menu" id="myTopnav">
-    <a href="#about" onclick="myFunction(1)">Sobre</a>
-    <a href="#news" onclick="myFunction(1)">Novidades</a>
-    <a href="#experience" onclick="myFunction(1)">Experiência</a>
-    <a href="#contact" onclick="myFunction(1)">Contato</a>
-    <a href="blog" onclick="myFunction(1)">Blog</a>
+    <a href="#about" onclick="myFunction()">Sobre</a>
+    <a href="#blog" onclick="myFunction()">Blog</a>
+    <a href="#portfolio" onclick="myFunction()">Portfólio</a>
+    <a href="#contact" onclick="myFunction()">Contato</a>
+
   </div>
 </header>
+
+
+<script>
+  const modification = ( element, classToCompare, classToAdd) => {
+    if (element.className === classToCompare) {
+      element.className = `${element.className} ${classToAdd}`;
+    }
+    else {
+      element.className = `${classToCompare}`;
+    }
+  }
+
+  function myFunction() {
+    let myTopNav = document.getElementById('myTopnav')
+    let barra = document.getElementById('barra')
+    modification(myTopNav, 'menu', 'responsive')
+    modification(barra, 'barra', 'responsive')
+  }
+</script>

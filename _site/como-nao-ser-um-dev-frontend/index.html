@@ -42,21 +42,40 @@
 
 
 <body>
-     <header class="barra">
-  <span class="logo-container">
-      <a href="#">
-        <img class="logotipo" onclick="myFunction(1)" src="./assets/img/logo.svg" alt="LucasTafarelBS :)" >
+     <header class="barra" id="barra">
+  <span class="logo-container" >
+      <a href="#" class="logotipo" >
+        <img onclick="myFunction()" src="./assets/img/logo.svg" alt="LucasTafarelBS :)" >
       </a>
       <a href="javascript:void(0);"  class="icon" onclick="myFunction()">&#9776;</a>
-    </span>
+  </span>
   <div class="menu" id="myTopnav">
-    <a href="#about" onclick="myFunction(1)">Sobre</a>
-    <a href="#news" onclick="myFunction(1)">Novidades</a>
-    <a href="#experience" onclick="myFunction(1)">Experiência</a>
-    <a href="#contact" onclick="myFunction(1)">Contato</a>
-    <a href="blog" onclick="myFunction(1)">Blog</a>
+    <a href="#about" onclick="myFunction()">Sobre</a>
+    <a href="#blog" onclick="myFunction()">Blog</a>
+    <a href="#portfolio" onclick="myFunction()">Portfólio</a>
+    <a href="#contact" onclick="myFunction()">Contato</a>
+
   </div>
 </header>
+
+
+<script>
+  const modification = ( element, classToCompare, classToAdd) => {
+    if (element.className === classToCompare) {
+      element.className = `${element.className} ${classToAdd}`;
+    }
+    else {
+      element.className = `${classToCompare}`;
+    }
+  }
+
+  function myFunction() {
+    let myTopNav = document.getElementById('myTopnav')
+    let barra = document.getElementById('barra')
+    modification(myTopNav, 'menu', 'responsive')
+    modification(barra, 'barra', 'responsive')
+  }
+</script>
 
 
     <div class="wrapper">
@@ -149,18 +168,12 @@
 
             </div>
 
-            <footer class="footer">
-  <div class="text">
-    <p class="title">
-      Feito com &hearts; e [Coffee] . Hospedado por
-      <a href="https://pages.github.com/" target="_blank" title="Clique aqui para ir para o site do GitHub Pages">
-          GitHub Pages
-        </a>
-      <a href="https://jekyllrb.com/" target="_blank" title="Clique aqui para ir pra página oficial do Jekyll">Jekyll</a>.
-    </p>
-  </div>
+            <!-- <footer>
+  <p>
+    Feito com <a class="fa fa-heart"></a>,&nbsp&nbsp&nbsp<i class="fa fa-coffee"></i> e <a href="https://jekyllrb.com/" target="_blank"> JEKYLL </a>. Hospedado por <a href="https://pages.github.com/" target="_blank"> GitHub Pages </a>
+  </p>
 </footer>
-
+ -->
         </div><!-- fim do /.container -->
     </div><!-- fim do /.wrapper -->
 </body>
