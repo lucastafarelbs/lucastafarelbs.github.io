@@ -3,6 +3,7 @@
 
 .portfolios
   flexIt(column)
+  margin-bottom 5rem
 
 .portfolio-container
   flexIt(column)
@@ -16,6 +17,8 @@
 .portfolio-container-posts
   flexIt(column)
   margin-top 1rem
+
+  margin-bottom 5rem
 
 .portfolio-title
   color rgba($primary, 0.4)
@@ -55,4 +58,4 @@
 
 +above($tablet)
   .portfolio-container-posts
-    flexIt(row, space-around, flex-start)
+    flexIt(row, space-between, flex-start)

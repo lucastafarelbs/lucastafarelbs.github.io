@@ -1,6 +1,10 @@
 .social-media
   flexIt(row, space-between)
+  flex-wrap wrap
+  justify-content center
+  max-width 70%
   margin-top 20px
+  overflow hidden
   div
     overflow hidden
     border-radius 100%
@@ -9,27 +13,25 @@
     text-align center
     flexIt(colum)
     cursor pointer
-    background-color rgba($primary, 0.6)
+    background-color rgba($primary, 0.4)
     margin 5px
     transition all .5s
     i
       font-size 3rem
       padding 5px
-      color rgba($secondary, 0.8)
+      color rgba($secondary, 0.9)
   div:hover
     background-color rgba($secondary, 1)
   .social-media-telegram:hover
-    i
-      color rgba($telegramColor, 1)
+    background-color rgba($telegramColor, 1)
+  .social-media-whatsapp:hover
+    background-color rgba($whatsappColor, 1)
   .social-media-github:hover
-    i
-      color rgba($githubColor, 1)
+    background-color rgba($githubColor, 1)
   .social-media-twitter:hover
-    i
-      color rgba($twitterColor, 1)
+    background-color rgba($twitterColor, 1)
   .social-media-linkedin:hover
-    i
-      color rgba($linkedinColor, 1)
+    background-color rgba($linkedinColor, 1)
 
 
 .social-media-telegram, .social-media-linkedin
